@@ -77,6 +77,10 @@ ul li.active a {
     color: #fff;
     font-size: 70px;
 }
+.rtitre{
+    color: #fff;
+    font-size: 76px;
+}
 
 .bouton {
     position: absolute;
