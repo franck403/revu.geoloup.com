@@ -1,6 +1,6 @@
 .rpdf {
   position: absolute;
-  top: 30%;
+  top: 50%;
   left: 30%;
   transform: translate(-50%, -50%);
 }
@@ -12,7 +12,7 @@
 }
 .rdiv {
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 30%;
   transform: translate(-50%, -50%);
 }
