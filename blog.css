@@ -4,3 +4,9 @@
   left: 30%;
   transform: translate(-50%, -50%);
 }
+.riframe {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
