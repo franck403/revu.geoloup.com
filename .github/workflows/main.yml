@@ -1,2 +1,0 @@
-run: npm install -D tailwindcss
-run: npx tailwindcss init
