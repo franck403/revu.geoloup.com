@@ -1,2 +1,10 @@
-
-
+.idiv {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transform: translate(-15%, -40%);
+}
+.input {
+  color:red;
+  text-align:right
+}
