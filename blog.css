@@ -35,9 +35,9 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-16%, -37%);
-    width:1050px;
-    height:600px;
+    transform: translate(-22%, -35%);
+    width: 1200px;
+    height: 643px;
   }
 }
 @media screen and (min-width: 2000px) {
