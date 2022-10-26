@@ -1,8 +1,8 @@
 .idiv {
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 30%;
-  transform: translate(-15%, -40%);
+  transform: translate(-15%, -30%);
 }
 .input {
   color:red;
