@@ -10,27 +10,27 @@
   background-color: black;
 }
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 800px; min-height:400px;) {
   .rpdf{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-16%, -37%);
-    width:750px;
-    height:600px;
+    width:800px;
+    height:400px;
   }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1000px; min-height:500px;) {
   .rpdf{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-16%, -37%);
-    width:950px;
-    height:600px;
+    width:1000px;
+    height:500px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px; min-height:650px;) {
   .rpdf{
     position: absolute;
     top: 50%;
@@ -40,14 +40,14 @@
     height: 643px;
   }
 }
-@media screen and (min-width: 2000px) {
+@media screen and (min-width: 2000px; min-height:700px;) {
   .rpdf{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-16%, -37%);
-    width:1950px;
-    height:600px;
+    width:2000px;
+    height:700px;
   }
 }
 
