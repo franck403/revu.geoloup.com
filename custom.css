@@ -1,2 +1,6 @@
-
-
+.ctext {
+    position: absolute;
+    top: 63%;
+    left: 37%;
+    transform: translate(-28%, -47%);
+}
