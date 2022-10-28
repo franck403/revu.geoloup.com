@@ -44,3 +44,10 @@ display: list-item;
   text-decoration: underline;
 }
 
+.rlist {
+  list-style: inside;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
