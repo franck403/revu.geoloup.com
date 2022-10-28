@@ -1,9 +1,13 @@
 .rdiv {
   position: absolute;
-  top: 55%;
-  left: 40%;
+  top: 70%;
+  left: 10%;
   transform: translate(-50%, -50%);
 }
+.rbig {
+  width:1000px;
+  height:600px;
+  }
 .resp-container { 
   position: relative; 
   overflow: hidden; 
