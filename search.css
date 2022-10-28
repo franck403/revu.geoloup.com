@@ -21,7 +21,26 @@ input[type=text]:focus {
 	margin-left: 90px;
 }
 
-.animals{
+.item{
 display: list-item;	
+}
+
+.item-link {
+  font-family: 'Trebuchet MS', sans-serif;
+}
+.item-link:link {
+  text-decoration: none;
+}
+
+.item-link:visited {
+  text-decoration: none;
+}
+
+.item-link:hover {
+  text-decoration: underline;
+}
+
+.tlist:active {
+  text-decoration: underline;
 }
 
