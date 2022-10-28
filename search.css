@@ -30,18 +30,22 @@ display: list-item;
 }
 .item-link:link {
   text-decoration: none;
+  color: white;
 }
 
 .item-link:visited {
   text-decoration: none;
+  color: white;
 }
 
 .item-link:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: white;
 }
 
 .tlist:active {
-  text-decoration: underline;
+  text-decoration: none;
+  color: white;
 }
 
 .rlist {
