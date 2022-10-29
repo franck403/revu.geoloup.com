@@ -13,35 +13,44 @@
 
         <header>
 
-            <div class="topnav navBar">
+            <div class="topnav navBar" id="jsresp">
 
                 <ul>
 
                     <li class="active">
-                        <a href="index.html" id="jsresp">
+                        <a href="index.html">
                             Accueil
                         </a>
                     </li>
 
                     <li>
-                        <a href="credit.html" id="jsresp">
+                        <a href="credit.html">
                             Credit
                         </a>
                     </li>
 
                     <li>
-                        <a href="list.html" id="jsresp">
+                        <a href="list.html">
                             list de revu
                         </a>
                     </li>
-                    <li class="active" id="jsresp">
+                    <li class="active">
                         <a href="halloween.html">
                             Spécial Halloween
                         </a>
                     </li>
                     
                 </ul>
-
+            <script>
+              function myFunction() {
+                var x = document.getElementById("jsresp");
+                if (x.className === "topnav")  
+                x.className += " responsive";}
+                else {
+                    x.className = "topnav";
+                  }
+                }
+            </script>
             </div>
 
             <div style="width: 870px;height: 150px;" class="titre rtitre">
@@ -69,16 +78,6 @@
             </div>
 
         </header>
-        <script>
-          function myFunction() {
-            var x = document.getElementById("jsresp");
-            if (x.className === "topnav")
-            x.className += " responsive";}
-            else {
-              x.className = "topnav";
-            }
-          }
-        </script>
 
     </body>
 
