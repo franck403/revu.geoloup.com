@@ -18,27 +18,28 @@
                 <ul>
 
                     <li class="active">
-                        <a href="index.html">
+                        <a href="index.html" id="jsresp">
                             Accueil
                         </a>
                     </li>
 
                     <li>
-                        <a href="credit.html">
+                        <a href="credit.html" id="jsresp">
                             Credit
                         </a>
                     </li>
 
                     <li>
-                        <a href="list.html">
+                        <a href="list.html" id="jsresp">
                             list de revu
                         </a>
                     </li>
-                    <li class="active">
+                    <li class="active" id="jsresp">
                         <a href="halloween.html">
                             Spécial Halloween
                         </a>
                     </li>
+                    
                 </ul>
 
             </div>
@@ -68,6 +69,16 @@
             </div>
 
         </header>
+        <script>
+          function myFunction() {
+            var x = document.getElementById("jsresp");
+            if (x.className === "topnav")
+            x.className += " responsive";}
+            else {
+              x.className = "topnav";
+            }
+          }
+        </script>
 
     </body>
 
