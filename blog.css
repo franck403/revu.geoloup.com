@@ -8,18 +8,6 @@
   height: 617px;
   width: 905px;
   }
-.resp-container { 
-  position: relative; 
-  overflow: hidden; 
-  padding-top: 56.25%; 
-}
-.resp-iframe { 
-  position: absolute; 
-  top: 0; 
-  left: 0;  
-  border: 0; 
-}
-
 .div {
   color: white;
   text-align: right;
