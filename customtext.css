@@ -1,2 +1,8 @@
+.textp {
+    position: absolute;
+    top: 60%;
+    left: 34%;
+    transform: translate(-6%, -30%);
+}
 
-
+
