@@ -13,7 +13,7 @@ header {
     background-size: cover;
     background-position: center;
 }
-@keyframes btn animation {
+@keyframes btn_animation {
 	0%,
 	100% {
 		transform: translateX(0);
@@ -40,7 +40,7 @@ header {
 		transform: translateX(-8px);
 	}
 }
-@keyframes enter animation {
+@keyframes enter_animation {
 	0% {
 		opacity: 0;
 		transform: rotate(-540deg) scale(0);
@@ -162,12 +162,12 @@ ul li.active a {
 }
 
 .btn {
-    animation: enter animation 3s ease 0s 1 normal backwards;
+    animation: enter_animation 3s ease 0s 1 normal backwards;
     transition: 00.6s ease;
 }
 
 .btn:hover {
-    animation: enter animation 1s ease 0s infinite normal backwards;
+    animation: enter_animation 1s ease 0s infinite normal backwards;
     background-color: #fff;
     color: #000;
 }  
