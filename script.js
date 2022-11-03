@@ -13,4 +13,4 @@ function popup() {
 		event.preventDefault();
 	});
 }
-/*<button type="button" id="open-popup" data-href="revu.geoloup.com/popup/login">Login</button>
+/*<button type="button" id="open-popup" data-href="revu.geoloup.com/popup/login">Login</button> */
