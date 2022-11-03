@@ -6,11 +6,11 @@ fonction popup() {
 	id.addEventListener("click", function(event){
 		let url = this.dataset.href;
 		if (popupWindow === null || popupWindow.closed) {
-			popupWindow = window.open(url, 'Logintorevugeoloupcom', windowSize);
+			popupWindow = window.open(url, 'Login to revu geoloup com', windowSize);
 		} else {
 			popupWindow.focus();
 		}
 		event.preventDefault();
 	});
 })();
-
+/*<button type="button" id="open-popup" data-href="revu.geoloup.com/popup/login">Login</button>
