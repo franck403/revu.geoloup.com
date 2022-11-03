@@ -89,38 +89,29 @@ header {
 }
 
 ul {
-    list-style: none;
-    float: left;
-    display: flex;
-    margin-top: 20px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
 }
 
-ul li a {
-    text-decoration: none;
-    color: #fff;
-    padding: 10px 20px;
-    border: 1px solid transparent;
-    margin: 10px;
-    border-radius: 5px;
-    transition: 0.6s ease;
-    cursor: pointer;
+li {
+  float: left;
 }
 
-ul li a:hover {
-    background: #fff;
-    color: #000;
-    border-radius: 10px;
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-ul li.active a {
-    background: #fff;    
-    color: #000;
+li a:hover {
+  background-color: #111;
 }
 
-.navBar {
-    max-width: 114rem;
-    margin: 0 auto;
-}
 
 .titre {
     position: absolute;
