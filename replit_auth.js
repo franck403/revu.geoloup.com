@@ -34,22 +34,3 @@ function LoginWithReplit() {
     location.reload();
   }
 }
-
-//fetches from /__replauthuser to get the user info
-
-// Example:
-// <script type="module"> const user = await getUserInfo() </script>
-async function getUserInfo() {
-  return fetch('repl.it/__replauth')
-    .then((e) => e.json())
-    .then((userInfo) => {
-      if (!userInfo) {
-        return null;
-      }
-
-      return userInfo;
-    })
-    .catch(() => {
-      return null;
-    });
-}
