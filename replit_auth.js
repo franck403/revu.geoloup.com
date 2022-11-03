@@ -40,7 +40,7 @@ function LoginWithReplit() {
 // Example:
 // <script type="module"> const user = await getUserInfo() </script>
 async function getUserInfo() {
-  return fetch('revu.geoloup.com')
+  return fetch('repl.it/__replauth')
     .then((e) => e.json())
     .then((userInfo) => {
       if (!userInfo) {
