@@ -1,15 +1,12 @@
-function popup() {
-	let id = document.getElementById("open-popup");
-	let popupWindow = null;
-	let windowSize = 'width=800,height=500,left=0,top=0';
+function parseJwt (token) {
+   var base64Url = token.split('.')[1];
+   var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+  var jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+  }).join(''));
 
-	id.addEventListener("click", function(event){
-		let url = this.dataset.href;
-		if (popupWindow === null || popupWindow.closed) {
-			popupWindow = window.open(url, 'Logintorevugeoloupcom', windowSize);
-		} else {
-			popupWindow.focus();
-		}
-		event.preventDefault();
-	});
-}
+  return JSON.parse(jsonPayload);
+}; 
+function handleCredentialResponse(response) {
+  console.log(JSON.stringify(parseJwt(response.credential)));
+    }
