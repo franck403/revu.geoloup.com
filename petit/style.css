@@ -50,7 +50,7 @@ body {
 }
 .rlist {
   list-style: inside;
-  position: absolute;
+  position: relative;
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -76,13 +76,13 @@ body {
 }
 
 .titre {
-    position: absolute;
+    position: relative;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 .text {
-    position: absolute;
+    position: relative;
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -101,7 +101,7 @@ body {
 }
 
 .bouton {
-    position: absolute;
+    position: relative;
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
