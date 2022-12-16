@@ -113,7 +113,12 @@ li a:hover {
   background-color: #111;
 }
 
-
+.stitre {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 .titre {
     position: absolute;
     top: 50%;
