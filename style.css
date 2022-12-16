@@ -176,7 +176,7 @@ li a:hover {
 }
 .dtext {
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 37%;
     transform: translate(-28%, -47%);
 }
