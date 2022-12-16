@@ -5,8 +5,10 @@
   transform: translate(17%, -71%);
 }
 .rbig {
-  height: 90%;
-  width: 100%;
+  flex-grow: 1;
+  border: none;
+  margin: 0;
+  padding: 0; 
   }
 .div {
   color: white;
