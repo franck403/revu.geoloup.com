@@ -173,4 +173,10 @@ li a:hover {
     animation: enter_animation 1s ease 0s infinite normal backwards;
     background-color: #fff;
     color: #000;
-}  
+}
+.dtext {
+    position: absolute;
+    top: 45%;
+    left: 37%;
+    transform: translate(-28%, -47%);
+}
