@@ -1,8 +1,11 @@
 .rdiv {
     display: block;
-    width: 100%;
+    width: 100vw;
     height: 90vh;
     padding-top: 16px; /* and this */
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -20,6 +23,7 @@
 }
 ul {
   position: fixed
+  padding-left: 0px;
   list-style-type: none;
   margin: 0;
   padding: 0;
