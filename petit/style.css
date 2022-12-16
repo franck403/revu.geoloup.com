@@ -122,3 +122,13 @@ body {
     background-color: #fff;
     color: #000;
 }  
+.idiv {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translate(-15%, -30%);
+}
+.input {
+  color:red;
+  text-align:right
+}
