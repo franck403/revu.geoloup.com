@@ -74,3 +74,51 @@ body {
 .tlist:active {
   text-decoration: underline;
 }
+
+.titre {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.texta {
+    color: #fff;
+    font-size: 40px;
+}
+.titre h1 {
+    color: #fff;
+    font-size: 70px;
+}
+.rtitre h1{
+    color: #fff;
+    font-size: 60px;
+}
+
+.bouton {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bouton a {
+    border: 1px solid #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    padding: 10px 18.5px;
+}
+
+.btn {
+    transition: 00.6s ease;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #000;
+}  
