@@ -79,13 +79,13 @@ body {
     position: relative;
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-30%, 12%);
 }
 .text {
     position: relative;
-    top: 60%;
+    top: 36%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -110%);
 }
 .texta {
     color: #fff;
