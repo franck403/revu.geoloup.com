@@ -114,19 +114,19 @@ li a:hover {
 }
 
 .stitre {
-    position: absolute;
+    position: relative;
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 .titre {
-    position: absolute;
+    position: relative;
     top: 50%;
-    left: 50%;
+    left:50%;
     transform: translate(-50%, -50%);
 }
 .rtitre {
-    position: absolute;
+    position: relative;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -140,21 +140,25 @@ li a:hover {
 .texta {
     color: #fff;
     font-size: 40px;
+    text-align: center;
 }
 .titre h1 {
     color: #fff;
     font-size: 70px;
+    text-align: center;
 }
 .rtitre h1{
     color: #fff;
     font-size: 60px;
+    text-align: center;
 }
 
 .bouton {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: auto;
+    width: 50vw;
+    height:50vh;
+    border: 3px solid #73AD21;
+    padding: 10px;
 }
 
 .bouton a {
@@ -162,6 +166,7 @@ li a:hover {
     border-radius: 50px;
     text-decoration: none;
     padding: 10px 18.5px;
+    text-align: center;
 }
 
 .btn {
