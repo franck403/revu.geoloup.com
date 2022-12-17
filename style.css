@@ -134,11 +134,12 @@ li a:hover {
 }
 .main {
     margin: auto;
-    margin-top:10vh;
+    margin-top:5vh;
     width: 70vw;
     height:40vh;
     padding: 10px;  
 }
+
 .text {
     position: absolute;
     top: 60%;
