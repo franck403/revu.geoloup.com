@@ -174,17 +174,29 @@ li a:hover {
 }
 .lmain {
     margin: auto;
-    margin-top:2vh;
+    margin-top:1vh;
     width: 70vw;
     height:40vh;
     padding: 10px;  
 }
 .lmain h1{
     color: #fff;
-    font-size: 60px;
+    font-size: 30px;
     text-align: center;
 }
 .tmain h1{
+    color: #fff;
+    font-size: 60px;
+    text-align: center;
+}
+.tlmain {
+    margin: auto;
+    margin-top:10vh;
+    width: 70vw;
+    height:20vh;
+    padding: 10px;  
+}
+.tlmain h1{
     color: #fff;
     font-size: 60px;
     text-align: center;
