@@ -153,7 +153,26 @@ li a:hover {
     height:40vh;
     padding: 10px;  
 }
+.smain {
+    margin: auto;
+    margin-top:3vh;
+    width: 70vw;
+    height:40vh;
+    padding: 10px;
+}
+.fmain {
+    margin: auto;
+    margin-top:10vh;
+    width: 70vw;
+    height:10vh;
+    padding: 10px;
+}
 .main h1{
+    color: #fff;
+    font-size: 60px;
+    text-align: center;
+}
+.tmain h1{
     color: #fff;
     font-size: 60px;
     text-align: center;
