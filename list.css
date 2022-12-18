@@ -24,3 +24,36 @@
 .tlist:active {
   text-decoration: underline;
 }
+.idiv {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translate(-15%, -30%);
+}
+.input {
+  color:red;
+  text-align:right
+}
+#searchbar{
+	margin-left: 15%;
+	padding:15px;
+	border-radius: 10px;
+}
+
+input[type=text] {
+	width: 30%;
+	-webkit-transition: width 0.15s ease-in-out;
+	transition: width 0.15s ease-in-out;
+}
+
+/* When the input field gets focus,
+		change its width to 100% */
+input[type=text]:focus {
+	width: 60%;
+}
+
+#list{
+	font-size: 1.5em;
+	margin-left: 90px;
+}
+
