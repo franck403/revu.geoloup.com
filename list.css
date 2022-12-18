@@ -57,3 +57,13 @@ input[type=text]:focus {
 	margin-left: 90px;
 }
 
+.idiv {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translate(-15%, -30%);
+}
+.input {
+  color:red;
+  text-align:right
+}
