@@ -16,6 +16,13 @@
   text-align: right;
   background-color: black;
 }
+body{
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://gilaxy04ytbcompte2.github.io/loowriters/storage/img/background.png);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 ul {
   position: fixed;
   list-style-type: none;
