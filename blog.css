@@ -45,18 +45,6 @@ li a:hover {
 li a:active {
   background-color: #111;
 }
-/*
-@media screen and (min-width: 2000px; min-height:700px;) {
-  .rpdf{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-16%, -37%);
-    width:2000px;
-    height:700px;
-  }
-}
-*/
 body {
   background-color: #424242;
 }
