@@ -3,3 +3,7 @@ function redirect() {
       window.location = "/petit/index.html";
   }
 }
+if (screen.width < '1510px'){
+   window.location.replace("https://revu.geoloup.com/petit/index.html");
+}
+            
