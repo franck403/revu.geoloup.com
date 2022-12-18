@@ -5,4 +5,3 @@ const urlParams = new URLSearchParams(queryString);
 
 const newUser = urlParams.get('load')
 console.log(newUser);
-// empty string
