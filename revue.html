@@ -38,6 +38,10 @@
     <iframe id="revue" src="error.html" class="rdiv" scrolling="no" frameBorder="0" allowFullScreen></iframe>
     <script>
         document.getElementById("revue").src=new URLSearchParams(window.location.search).get('load');
+        var lastr = "astr=" + new URLSearchParams(window.location.search).get('load');
+        var lastrd = lastr + "; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+        document.cookie = lastr;
+        document.cookie = lastr;
     </script>
 </body>
 </html>
