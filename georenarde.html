@@ -1,2 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
 
-
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script href="script.js"  src="script.js"></script>
+        <title>Revue | Geoloup</title>
+    </head>
+
+    <body onload="setTimeout('redirect()', 300)" >
+
+        <header>
+          <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="credit.html">Credit</a></li>
+            <li><a href="list.html">List</a></li>
+            <li><a href="noel.html">Noël</a></li>
+            </ul>
+
+            <div class="tmain">
+
+                <h1>GeoRenarde<br>la revue fièrement Québecoise<br>fait par kawai store </h1>
+
+            </div>
+      
+            <div class="bmain">
+                <div class="bpl">  
+                  <a class="btnv" id="btn" href="shop.geoloup.com">
+                      Kawai store Website
+                  </a>
+  
+                  <a class="btn" id="btn" href="list.html">
+                      Liste de revue
+                  </a>
+  
+                  <a class="btn" id="btn" href="index.html">
+                      Revue home page
+                  </a>
+               </div>   
+            </div>
+
+        </header>
+        <script>if (screen.width < '1510px') 
+            window.location.replace("https://revu.geoloup.com/petit/index.html");
+            </script>
+
+    </body>
+
+</html> 
