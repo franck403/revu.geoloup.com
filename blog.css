@@ -97,3 +97,7 @@ body {
   top: 0;
   left: 0;
 }
+
+a:hover{
+  cursor: pointer;
+}

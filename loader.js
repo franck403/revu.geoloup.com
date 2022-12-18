@@ -7,4 +7,5 @@ const Revue = urlParams.get('load')
 console.log(Revue);
 
 document.getElementById("revue").src=Revue;
+document.Revue.src=Revue;
 
