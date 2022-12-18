@@ -69,3 +69,67 @@ input[type=text]:focus {
   color:red;
   text-align:right
 }
+#searchbar{
+	margin-left: 15%;
+	padding:15px;
+	border-radius: 10px;
+}
+
+input[type=text] {
+	width: 90%;
+	-webkit-transition: width 0.15s ease-in-out;
+	transition: width 0.15s ease-in-out;
+}
+
+/* When the input field gets focus,
+		change its width to 100% */
+input[type=text]:focus {
+	width: 150%;
+}
+
+#list{
+	font-size: 1.5em;
+	margin-left: 90px;
+}
+
+.animals{
+display: list-item;	
+}
+
+.item-link {
+  font-family: 'Trebuchet MS', sans-serif;
+}
+.item-link:link {
+  text-decoration: none;
+  color: white;
+}
+
+.item-link:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.item-link:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.tlist:active {
+  text-decoration: none;
+  color: white;
+}
+
+.rlist {
+  list-style: inside;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.rplace {
+  list-style: inside;
+  position: absolute;
+  top: 30%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+}
