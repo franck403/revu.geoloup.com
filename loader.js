@@ -3,5 +3,8 @@ console.log(queryString);
 
 const urlParams = new URLSearchParams(queryString);
 
-const newUser = urlParams.get('load')
-console.log(newUser);
+const Revue = urlParams.get('load')
+console.log(Revue);
+
+document.getElementById("revue").src="(Revue)";
+
