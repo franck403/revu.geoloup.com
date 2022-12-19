@@ -274,3 +274,10 @@ li a:active {
     left: 37%;
     transform: translate(-28%, -47%);
 }
+output {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
