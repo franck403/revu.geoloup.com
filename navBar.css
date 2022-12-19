@@ -8,6 +8,11 @@ header ul{
 header ul li{
     list-style: none;
 }
+.tmain h1{
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+}
 @media screen and (max-width: 850px) {
     .tmain h1{
         font-size: 1em;
