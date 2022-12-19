@@ -42,7 +42,7 @@
     <iframe id="revue" src="error.html" class="rdiv" scrolling="no" frameBorder="0" allowFullScreen></iframe>
     <script>
         var urlparm = new URLSearchParams(window.location.search).has('load')
-        if (urlparm == True) {
+        if (urlparm == "True") {
             console.log("ok load parm si here");
             document.getElementById("revue").src=new URLSearchParams(window.location.search).get('load');
             var lastr = "lastr=" + new URLSearchParams(window.location.search).get('load');
