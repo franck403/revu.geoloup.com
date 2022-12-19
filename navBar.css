@@ -2,7 +2,7 @@ header ul{
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 50%;
+    top: 50;
     left: 0;
 }
 header ul li{
