@@ -54,7 +54,7 @@
             document.cookie = lastr;
         } 
         else if (cookielast == "") {
-            document.getElementById("revue").src="error.html";  
+            window.location.reload("list.html") 
         }
         else {
             var lastrevu = document.cookie.valueOf("lastr")
