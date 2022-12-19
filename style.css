@@ -100,10 +100,6 @@ ul {
     background-color: #333;
 }
 
-li {
-    float: left;
-}
-
 li a {
     display: block;
     color: white;
@@ -188,11 +184,6 @@ li a:active {
 .lmain h1{
     color: #fff;
     font-size: 30px;
-    text-align: center;
-}
-.tmain h1{
-    color: #fff;
-    font-size: 60px;
     text-align: center;
 }
 .tlmain {
