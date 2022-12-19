@@ -52,7 +52,8 @@
         }
         else {
             var lastrevu = document.cookie.valueOf("lastr")
-            document.getElementById("revue").src=lastrevu;
+            var laster = lastrevu.replace('lastr=','')
+            document.getElementById("revue").src=laster;
         }
     </script>
 </body>
