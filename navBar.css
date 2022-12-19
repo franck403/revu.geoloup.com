@@ -10,7 +10,6 @@ header ul li{
 }
 @media screen and (max-width: 850px) {
     .tmain h1{
-        width: auto;
-        font-size: auto;
+        font-size: 1em;
     }
 }
