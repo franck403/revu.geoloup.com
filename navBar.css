@@ -3,6 +3,7 @@ header ul{
     flex-direction: column;
     justify-content: center;
     position: fixed;
+    top: 50vw;
     left: 0;
 }
 header ul li{
