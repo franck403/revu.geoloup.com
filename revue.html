@@ -41,11 +41,19 @@
     </div>
     <iframe id="revue" src="error.html" class="rdiv" scrolling="no" frameBorder="0" allowFullScreen></iframe>
     <script>
-        document.getElementById("revue").src=new URLSearchParams(window.location.search).get('load');
-        var lastr = "lastr=" + new URLSearchParams(window.location.search).get('load');
-        var lastrd = lastr + "; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-        document.cookie = lastr;
-        document.cookie = lastr;
+        var urlparm = new URLSearchParams(window.location.search).has('load')
+        if (urlparm == True) {
+            console.log("ok load parm si here");
+            document.getElementById("revue").src=new URLSearchParams(window.location.search).get('load');
+            var lastr = "lastr=" + new URLSearchParams(window.location.search).get('load');
+            var lastrd = lastr + "; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+            document.cookie = lastr;
+            document.cookie = lastr;
+        }
+        else {
+            var lastrevu = document.cookie.get('lastr')
+            document.getElementById("revue").src=lastrevu;
+        }
     </script>
 </body>
 </html>
