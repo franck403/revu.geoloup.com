@@ -54,7 +54,7 @@
             document.cookie = lastr;
         } 
         else if (cookielast == "") {
-            window.location.reload("https://revu.geoloup.com/list.html") 
+            document.getElementById("revue").src="error.html";
         }
         else {
             var lastrevu = document.cookie.valueOf("lastr")
