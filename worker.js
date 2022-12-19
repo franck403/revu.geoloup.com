@@ -1,10 +1,4 @@
-function sleep(milliseconds) {
-  const date = Date.now();
-  let currentDate = null;
-  do {
-    currentDate = Date.now();
-  } while (currentDate - date < milliseconds);
-}
+function fmtMSS(s){return(s-(s%=60))/60+(9<s?':':':0')+s}
 
 var i = 0;
 function list() {
@@ -13,8 +7,7 @@ function list() {
     var revu = i;
   }
   else {
-    sleep(60000)
-    revu = i / 60;
+    revu = fmtMSS(i);
   }
   postMessage(revu);
   setTimeout("list()",100000000000000000000000000000000000000000000);
