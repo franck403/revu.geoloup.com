@@ -9,3 +9,8 @@ header ul{
 header ul li{
     list-style: none;
 }
+@media screen and (max-width: 850px) {
+    .tmain h1{
+        width: auto;
+    }
+}
