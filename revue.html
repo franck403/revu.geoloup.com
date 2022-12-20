@@ -63,7 +63,9 @@
         else {
             var lastrevu = document.cookie.valueOf("lastr")
             var laster = lastrevu.replace('lastr=','')
-            document.getElementById("revue").src=laster;
+            var revulinkcookie = db[laster]
+            document.getElementById("revue").src=revulinkcookie;
+            
         }
         var audio = new Audio('loading.mp3');
         audio.play();
