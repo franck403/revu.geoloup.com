@@ -9,7 +9,6 @@
         <link rel="stylesheet" href="list.css">
         <link rel="stylesheet" href="bar.css">
         <script src="search.js"></script>
-        <script src="loader.js"></script>
         <title>GeoRenard</title>
         <link rel="icon" href="image/maison.png">
         <style>
@@ -77,7 +76,7 @@
                 <link href="/local/api/login.css" rel="stylesheet">
                 <main class="form-signin">
                   <form onsubmit="return login()">
-                    <img class="mb-4" src="logo.png" alt="" height="300">
+                    <img class="mb-4" src="/local/api/logo.png" alt="" height="300">
                     <h1 class="h3 mb-3 fw-normal"><b>Geoloup</b> - Login</h1>
                 
                     <div class="form-floating">
@@ -160,10 +159,12 @@
             if (worker == "false") {
               const element = document.getElementById("pay");
               element.remove();
+              console.log("free session")
             }
             else if (worker == "true") {
               const element = document.getElementById("free");
               element.remove();
+              console.log("pay session")
             }
             else {
               console.log("a error was find");
