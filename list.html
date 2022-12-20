@@ -154,8 +154,8 @@
           </script>
           <script>
             const jwtw = localStorage.getItem("jwt");
-            if (jwtw != null){var worker = "false";}
-            else {var worker = "true"}
+            if (jwtw != null){var worker = "true";}
+            else {var worker = "false"}
             if (worker == "false") {
               document.getElementById("pay").remove();
               console.log("free session")
