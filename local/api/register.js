@@ -18,7 +18,7 @@ function login() {
     "lname": lname,
     "username": username,
     "password": password,
-    "amail":username,
+    "email":username,
     "avatar": avatar
   }));
   xhttp.onreadystatechange = function () {
