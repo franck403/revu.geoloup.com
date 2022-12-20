@@ -4,7 +4,7 @@ if (jwt != null) {
 }
 
 function register() {
-  window.location.href("https://revu.geoloup.com/local/api/register.html")
+  window.location.href ="https://revu.geoloup.com/local/api/register.html"
 }
 
 
