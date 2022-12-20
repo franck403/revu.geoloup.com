@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading a Revu on Geoloup</title>
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.min.js"></script>
+    <link rel="icon" href="image/maison.png">
+</head>
+<body>
+    <div class="navBar">
+        <ul>
+            <li>
+                <a href="index.html">
+                    Accueil
+                </a>
+            </li>
+            <li>
+                <a href="credit.html">
+                    Credit
+                </a>
+            </li>
+            <li>
+                <a href="list.html">
+                    list
+                </a>
+            </li>
+            <li class="active">
+                <a>
+                    lecture d'une revue gratuite en cours
+                </a>
+            </li>
+            <li>
+                <a id="timer">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <iframe id="revue" src="error.html" class="rdiv" scrolling="no" frameBorder="0" allowFullScreen></iframe>
+    <script>
+        var db = {"b4t58tb9854tb89":"/local/page/georenard/2022/noel2022.html","789iongt66re":"/local/page/georenard/2022/humain.html"}
+        var revudb = new URLSearchParams(window.location.search).get('load')
+        var revulink = db[revudb]
+        console.log("ok loading the free version");
+        document.getElementById("revue").src=revulink;
+        var audio = new Audio('loading.mp3');
+        audio.play();
+    </script>
+</body>
+</html>
