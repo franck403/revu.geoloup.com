@@ -157,13 +157,11 @@
             if (jwtw != null){var worker = "false";}
             else {var worker = "true"}
             if (worker == "false") {
-              const element = document.getElementById("pay");
-              element.remove();
+              document.getElementById("pay").remove();
               console.log("free session")
             }
             else if (worker == "true") {
-              const element = document.getElementById("free");
-              element.remove();
+              document.getElementById("free").remove();
               console.log("pay session")
             }
             else {
