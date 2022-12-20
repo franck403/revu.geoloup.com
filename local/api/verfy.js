@@ -3,6 +3,11 @@ if (jwt != null) {
   window.location.href = 'https://revu.geoloup.com/local/api/account.html'
 }
 
+function register() {
+  window.location.href("https://revu.geoloup.com/local/api/register.html")
+}
+
+
 function login() {
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
