@@ -33,7 +33,7 @@ function login() {
           confirmButtonText: 'OK'
         }).then((result) => {
           if (result.isConfirmed) {
-            window.location.href = 'https://revu.geoloup.com/local/api/account.html';
+            window.location.href = 'https://revu.geoloup.com/local/api/login.html';
           }
         });
       } else {
