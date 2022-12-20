@@ -43,12 +43,31 @@
     <iframe id="revue" src="error.html" class="rdiv" scrolling="no" frameBorder="0" allowFullScreen></iframe>
     <script>
         var db = {"b4t58tb9854tb89":"/local/page/georenard/2022/noel2022.html","789iongt66re":"/local/page/georenard/2022/humain.html"}
+        var urlparm = new URLSearchParams(window.location.search).has('load')
+        var cookierevu = document.cookie.valueOf("lastr")
+        var cookielast = cookierevu.replace('lastr=','')
+        document.getElementById("revue").src=laster;
         var revudb = new URLSearchParams(window.location.search).get('load')
         var revulink = db[revudb]
-        console.log("ok loading the free version");
-        document.getElementById("revue").src=revulink;
-        var audio = new Audio('loading.mp3');
-        audio.play();
+        if (urlparm == true) {
+            console.log("ok load parm si here");
+            document.getElementById("revue").src=revulink;
+            var lastr = "lastr=" + new URLSearchParams(window.location.search).get('load');
+            var lastrd = lastr + "; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+            document.cookie = lastr;
+            document.cookie = lastr;
+        } 
+        else if (cookielast == "") {
+            document.getElementById("revue").src="error.html";
+        }
+        else {
+            var lastrevu = document.cookie.valueOf("lastr")
+            var laster = lastrevu.replace('lastr=','')
+            var revulinkcookie = db[laster]
+            document.getElementById("revue").src=revulinkcookie;
+            
+        }
+
     </script>
 </body>
 </html>
