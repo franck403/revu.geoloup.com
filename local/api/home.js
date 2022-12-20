@@ -1,3 +1,5 @@
+var jwt = localStorage.getItem("jwt");
+
 function register() {
   window.location.href ="https://revu.geoloup.com/local/api/register.html"
 }
