@@ -112,14 +112,18 @@
               <div class="smain">
                 <div class="bpl" style="margin-top: 20vh;">
           	      <ol id='list'>
-                    <a id="pay" href="revue.html" class="animals item-link tlist">last revue read</a>
-                    <a id="pay" href="revue.html?load=jufehi554ufleisn8l49" class="animals item-link tlist">Bibliographie - Seth dieu</a>
-      	        	  <a id="pay" href="revue.html?load=r89n5bt895t98y5" class="animals item-link tlist">GeoRenard - les jeux olympiques</a>
-          		      <a id="pay" href="revue.html?load=789iongt66re" class="animals item-link tlist">GeoRenard - les humains</a>
-                    <a id="pay" href="revue.html?load=49jj3mp489ypm389" class="animals item-link tlist">GeoRenard - Halloween</a>
-                    <a id="pay" href="revue.html?load=b4t58tb9854tb89" class="animals item-link tlist">GeoRenard - Noël</a>
-                    <a id="free" href="free.html?load=b4t58tb9854tb89" class="animals item-link tlist">GeoRenard - Noël (version gratuite)</a>
-                    <a id="free" href="free.html?load=789iongt66re" class="animals item-link tlist">GeoRenard - humain (version gratuite) </a>
+                    <element id="pay">
+                      <a href="revue.html" class="animals item-link tlist">last revue read</a>
+                      <a  href="revue.html?load=jufehi554ufleisn8l49" class="animals item-link tlist">Bibliographie - Seth dieu</a>
+                      <a  href="revue.html?load=r89n5bt895t98y5" class="animals item-link tlist">GeoRenard - les jeux olympiques</a>
+                      <a  href="revue.html?load=789iongt66re" class="animals item-link tlist">GeoRenard - les humains</a>
+                      <a  href="revue.html?load=49jj3mp489ypm389" class="animals item-link tlist">GeoRenard - Halloween</a>
+                      <a  href="revue.html?load=b4t58tb9854tb89" class="animals item-link tlist">GeoRenard - Noël</a>
+                    </element>
+                    <element id="free">
+                      <a  href="free.html?load=b4t58tb9854tb89" class="animals item-link tlist">GeoRenard - Noël (version gratuite)</a>
+                      <a  href="free.html?load=789iongt66re" class="animals item-link tlist">GeoRenard - humain (version gratuite) </a>
+                    </element>
       	          </ol>
                 </div>
               </div>  
@@ -154,22 +158,15 @@
           </script>
           <script>
             const jwtw = localStorage.getItem("jwt");
-            var delete = 0
             if (jwtw != null){var worker = "true";}
             else {var worker = "false"}
             if (worker == "false") {
-              while (delete < 7) {
-                delete = delete + 1;
-                document.getElementById("pay").remove();
-                console.log("free session");
-              }
+              document.getElementBy).remove();
+              console.log("free session");
             }
             else if (worker == "true") {
-              while (delete < 4) {
-                delete = delete + 1;
-                document.getElementById("free").remove();
-                console.log("pay session");
-              }
+              document.getElementById("free").remove();
+              console.log("pay session");
             }
             else {
               console.log("a error was find");
