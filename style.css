@@ -108,9 +108,14 @@ li a {
     text-decoration: none;
 }
 
+right {
+    float: left;
+}
+
 li a:hover {
     background-color: #111;
 }
+
 li a:active {
     background-color: #111;
 }
@@ -122,6 +127,7 @@ li a:active {
     height:40vh;
     padding: 10px;  
 }
+
 .tmain {
     margin: auto;
     margin-top:10vh;
@@ -129,6 +135,7 @@ li a:active {
     height:40vh;
     padding: 10px;  
 }
+
 .main {
     margin: auto;
     margin-top:5vh;
@@ -136,6 +143,7 @@ li a:active {
     height:40vh;
     padding: 10px;  
 }
+
 .smain {
     margin: auto;
     margin-top:3vh;
