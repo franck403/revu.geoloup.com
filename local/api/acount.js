@@ -26,5 +26,8 @@ loadUser();
 
 function logout() {
   localStorage.removeItem("jwt");
-  window.location.href = 'https://revu.geoloup.com/local/api//login.html'
+  window.location.href = 'https://revu.geoloup.com/local/api/login.html'
+}
+function home() {
+  window.location.href = 'https://revu.geoloup.com/list.html'
 }
