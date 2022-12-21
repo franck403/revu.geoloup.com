@@ -23,5 +23,5 @@ else {
 
 
 console.log("-----------------------------");
-console.log(" finish generating the srddion");
+console.log("finish generating the session");
 console.log("-----------------------------");
