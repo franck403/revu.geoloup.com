@@ -43,8 +43,8 @@ li a {
     text-decoration: none;
 }
 
-right {
-    float: left;
+.right {
+    float: right;
 }
 
 li a:hover {
