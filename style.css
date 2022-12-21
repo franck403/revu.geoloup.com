@@ -93,6 +93,7 @@ li a:active {
     height:10vh;
     padding: 10px;
 }
+
 .main h1{
     color: #fff;
     font-size: 60px;
@@ -130,21 +131,18 @@ li a:active {
     text-align: center;
 }
 .bpl {
-    position: absolute;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
 }
-.text {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.texta {
-    color: #fff;
-    font-size: 40px;
-    text-align: center;
+.text {    
+    margin: auto;
+    margin-top:10vh;
+    width: 100vw;
+    height:10vh;
+    padding: 10px;
+    text-align:center;
+
 }
 .tmain h1 {
     color: #fff;
