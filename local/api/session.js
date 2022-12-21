@@ -10,7 +10,6 @@ else {
     var key = Math.random();
     console.log("generating computer key");
     localStorage.setItem("computerid", key);
-    console.log("finish");
 }
 
 if (keyid != null) {
@@ -20,8 +19,9 @@ else {
     var session = Math.random();
     console.log("generating session keys");
     sessionStorage.setItem("session", session);
-    console.log("finish");
 }
 
 
+console.log("-----------------------------");
+console.log(" finish generating the srddion");
 console.log("-----------------------------");
