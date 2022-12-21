@@ -58,39 +58,29 @@ li a:active {
 .bmain {
     margin: auto;
     margin-top:1vh;
-    width: 70vw;
-    height:40vh;
     padding: 10px;  
 }
 
 .tmain {
     margin: auto;
     margin-top:10vh;
-    width: 70vw;
-    height:40vh;
     padding: 10px;  
 }
 
 .main {
     margin: auto;
     margin-top:5vh;
-    width: 70vw;
-    height:40vh;
     padding: 10px;  
 }
 
 .smain {
     margin: auto;
     margin-top:3vh;
-    width: 70vw;
-    height:40vh;
     padding: 10px;
 }
 .fmain {
     margin: auto;
     margin-top:10vh;
-    width: 70vw;
-    height:10vh;
     padding: 10px;
 }
 
@@ -102,8 +92,6 @@ li a:active {
 .lmain {
     margin: auto;
     margin-top:1vh;
-    width: 70vw;
-    height:40vh;
     padding: 10px;  
 }
 .lmain h1{
@@ -114,8 +102,6 @@ li a:active {
 .tlmain {
     margin: auto;
     margin-top:10vh;
-    width: 70vw;
-    height:20vh;
     padding: 10px;  
 }
 .tlmain h1{
@@ -148,27 +134,4 @@ li a:active {
     color: #fff;
     font-size: 70px;
     text-align: center;
-}
-
-.bouton {
-    margin: auto;
-    width: 50vw;
-    height:50vh;
-    border: 3px solid #73AD21;
-    padding: 10px;
-}
-
-.bouton a {
-    border: 1px solid #fff;
-    border-radius: 50px;
-    text-decoration: none;
-    padding: 10px 18.5px;
-    text-align: center;
-}
-
-.dtext {
-    position: absolute;
-    top: 50%;
-    left: 37%;
-    transform: translate(-28%, -47%);
 }
