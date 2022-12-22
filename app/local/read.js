@@ -1,6 +1,6 @@
 var myVar;
 
-function read() {
+function start() {
   myVar = setTimeout(showPage, 3000);
 }
 
