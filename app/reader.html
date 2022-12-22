@@ -7,7 +7,7 @@
     <title>Reading a Revu on Geoloup</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="loader.css">
-    <script src="main.min.js"></script>
+    <script src="/local/api/main.min.js"></script>
     <script src="/app/local/session.js"></script>
     <script src="/app/local/read.js"></script>
     
@@ -15,13 +15,11 @@
 </head>
 <body  onload="start()">
     <div id="loader"></div>
-    <div style="display:none;" id="reader" class="animate-bottom">
-        <header>
-            <ul>
-                <li><a class="active" href="https://revu.geoloup.com/index.html">Home</a></li>
-            </ul>
-        </header>
-        <iframe id="revue" src="error.html" class="rdiv" scrolling="no" frameBorder="0" allowFullScreen></iframe>
-    </div> 
+    <header>
+        <ul>
+            <li><a class="active" href="https://revu.geoloup.com/index.html">Home</a></li>
+        </ul>
+    </header>
+    <iframe id="revue" src="https://revu.geoloup.com/error.html" class="rdiv" scrolling="no" frameBorder="0" allowFullScreen></iframe>
 </body>
 </html>

@@ -25,7 +25,7 @@ if (urlparm == true) {
     document.cookie = lastr;
 } 
 else if (cookielast == "") {
-    document.getElementById("revue").src="error.html";
+    document.getElementById("revue").src="https://revu.geoloup.com/error.html";
 }
 else {
     var lastrevu = document.cookie.valueOf("lastr")
