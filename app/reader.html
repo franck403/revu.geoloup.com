@@ -13,34 +13,12 @@
     <link rel="icon" href="https://revu.geoloup.com/image/maison.png">
 </head>
 <body>
-    <div class="navBar">
+
+    <header>
         <ul>
-            <li>
-                <a href="index.html">
-                    Accueil
-                </a>
-            </li>
-            <li>
-                <a href="credit.html">
-                    Credit
-                </a>
-            </li>
-            <li>
-                <a href="list.html">
-                    list
-                </a>
-            </li>
-            <li class="active">
-                <a>
-                    lecture d'une revue en cours
-                </a>
-            </li>
-            <li>
-                <a id="timer">
-                </a>
-            </li>
+            <li><a class="active" href="https://revu.geoloup.com/index.html">Home</a></li>
         </ul>
-    </div>
+    </header>
     <iframe id="revue" src="error.html" class="rdiv" scrolling="no" frameBorder="0" allowFullScreen></iframe>
     <script>
         var urlparm = new URLSearchParams(window.location.search).has('load')
