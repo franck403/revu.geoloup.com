@@ -1,11 +1,57 @@
-<head>
-    <style>
-    h1{
-        font-size: 1.5em;
-        margin-left: 90px;
-    }
-    </style>
-</head>
-<body>
-    <h1>hello world</h1>
-</body>
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="list.css">
+        <link rel="stylesheet" href="bar.css">
+        <script src="/local/session.js"></script>
+        <script src="/local/load.js"></script>
+        <script src="search.js"></script>
+        <title>GeoRenard</title>
+        <link rel="icon" href="https://revu.geoloup.com/image/maison.png">
+    </head>
+    <body>
+        <header>
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="credit.html">Credit</a></li>
+                <li><a href="list.html">List</a></li>
+                <li><a href="noel.html">Noël</a></li>
+        </header>
+        <article>
+            <div>
+              <div class="fmain">
+                <div class="bpl">  
+                  <!-- input tag -->
+                	<input id="searchbar" onkeyup="search_revu()" type="text"
+              		name="search" placeholder="Rechercher une reader..">
+          	  	  <!-- ordered list -->
+                </div>
+              </div>
+              <div class="smain">
+                <div class="bpl">
+          	      <ol id='list'>
+                    <element id="pay">
+                      <a href="reader.html" class="animals item-link tlist">dernière revu lu</a>
+                      <a  href="reader.html?load=jufehi554ufleisn8l49" class="animals item-link tlist">Bibliographie - Seth dieu</a>
+                      <a  href="reader.html?load=r89n5bt895t98y5" class="animals item-link tlist">GeoRenard - les jeux olympiques</a>
+                      <a  href="reader.html?load=789iongt66re" class="animals item-link tlist">GeoRenard - les humains</a>
+                      <a  href="reader.html?load=49jj3mp489ypm389" class="animals item-link tlist">GeoRenard - Halloween</a>
+                      <a  href="reader.html?load=b4t58tb9854tb89" class="animals item-link tlist">GeoRenard - Noël</a>
+                    </element>
+                    <element id="free">
+                      <a href="free.html" class="animals item-link tlist">dernière revu lu</a>
+                      <a  href="free.html?load=b4t58tb9854tb89" class="animals item-link tlist">GeoRenard - Noël (version gratuite)</a>
+                      <a  href="free.html?load=789iongt66re" class="animals item-link tlist">GeoRenard - humain (version gratuite) </a>
+                    </element>
+      	          </ol>
+                </div>
+              </div>  
+           </div>   
+        </article>
+    </body>
+</html>

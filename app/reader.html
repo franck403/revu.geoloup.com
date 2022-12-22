@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading a Revu on Geoloup</title>
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.min.js"></script>
+    <script src="/local/session.js"></script>
+    
+    <link rel="icon" href="https://revu.geoloup.com/image/maison.png">
+</head>
+<body>
+    <div class="navBar">
+        <ul>
+            <li>
+                <a href="index.html">
+                    Accueil
+                </a>
+            </li>
+            <li>
+                <a href="credit.html">
+                    Credit
+                </a>
+            </li>
+            <li>
+                <a href="list.html">
+                    list
+                </a>
+            </li>
+            <li class="active">
+                <a>
+                    lecture d'une revue en cours
+                </a>
+            </li>
+            <li>
+                <a id="timer">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <iframe id="revue" src="error.html" class="rdiv" scrolling="no" frameBorder="0" allowFullScreen></iframe>
+    <script>
+        var urlparm = new URLSearchParams(window.location.search).has('load')
+        var cookierevu = document.cookie.valueOf("lastr")
+        var cookielast = cookierevu.replace('lastr=','')
+        document.getElementById("revue").src=laster;
+        var db = {"b4t58tb9854tb89":"/local/page/georenard/2022/noel2022.html","789iongt66re":"/local/page/georenard/2022/humain.html","r89n5bt895t98y5":"/local/page/georenard/2022/olympique.html","jufehi554ufleisn8l49":"/local/page/georenard/dieu/egypte/seth.html","49jj3mp489ypm389":"/local/page/georenard/2022/halloween2022.html"}
+        var revudb = new URLSearchParams(window.location.search).get('load')
+        var revulink = db[revudb]
+        if (urlparm == true) {
+            console.log("ok load parm si here");
+            document.getElementById("revue").src=revulink;
+            var lastr = "lastr=" + new URLSearchParams(window.location.search).get('load');
+            var lastrd = lastr + "; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+            document.cookie = lastr;
+            document.cookie = lastr;
+        } 
+        else if (cookielast == "") {
+            document.getElementById("revue").src="error.html";
+        }
+        else {
+            var lastrevu = document.cookie.valueOf("lastr")
+            var laster = lastrevu.replace('lastr=','')
+            var revulinkcookie = db[laster]
+            document.getElementById("revue").src=revulinkcookie;
+            
+        }
+        var audio = new Audio('loading.mp3');
+        audio.play();
+    </script>
+</body>
+</html>
