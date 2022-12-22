@@ -1,14 +1,3 @@
-var myVar;
-
-function start() {
-  myVar = setTimeout(showPage, 3000);
-}
-
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("reader").style.display = "block";
-}
-
 var urlparm = new URLSearchParams(window.location.search).has('load')
 var cookierevu = document.cookie.valueOf("lastr")
 var cookielast = cookierevu.replace('lastr=','')
