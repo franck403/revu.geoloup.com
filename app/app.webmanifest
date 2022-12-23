@@ -1,0 +1,17 @@
+{
+    "name": "Geoloup - Reader",
+    "short_name": "Geoloup_Reader",
+    "description": "Geoloup - Revu reader | made by Geoloup dev team",
+    "start_url": "/app/reader.html",
+    "display": "fullscreen",
+    "theme_color": "#B12A34",
+    "background_color": "#B12A34"
+}{
+    "name": "Geoloup - Revu Reader",
+    "short_name": "GeoReanrd",
+    "description": "Geoloup - Revu reader | made by Geoloup dev team",
+    "start_url": "/app/view.html",
+    "display": "fullscreen",
+    "theme_color": "#B12A34",
+    "background_color": "#B12A34"
+}
