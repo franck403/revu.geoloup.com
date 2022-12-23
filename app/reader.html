@@ -31,8 +31,6 @@
             console.log("ok load parm si here");
             document.getElementById("revue").src=revulink;
             var lastr = "lastr=" + new URLSearchParams(window.location.search).get('load');
-            var lastrd = lastr + "; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-            document.cookie = lastr;
             document.cookie = lastr;
         } 
         else if (cookielast == "") {
