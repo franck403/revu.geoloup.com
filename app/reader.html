@@ -39,9 +39,10 @@
             document.getElementById("revue").src="https://revu.geoloup.com/error.html";
         }
         else {
-            var lastrevu = document.cookie.valueOf("lastr")
-            var laster = lastrevu.replace('lastr=','')
-            var revulinkcookie = db[laster]
+            var lastrevu = document.cookie.valueOf("lastr");
+            var laster = lastrevu.replace('lastr=','');
+            var revulinkcookie = db[laster];
+            console.log(revulinkcookie)
             document.getElementById("revue").src=revulinkcookie;
             
         }
