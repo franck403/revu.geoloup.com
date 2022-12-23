@@ -5,6 +5,7 @@ const appShellFiles = [
   '/app/view.html',
   '/app/local/main.min.js',
   '/app/local/session.js',
+  '/search.js',
   '/app/style.css',
   '/app/blog.css',
   'https://revu.geoloup.com/image/maison.png',
