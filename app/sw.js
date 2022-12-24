@@ -20,8 +20,6 @@ const file = [
   '/app/bar.css',
   '/app/style.css',
   '/app/blog.css',
-  '/image/maison.png',
-  '/image/maison144.png',
   '/loading.mp3',
   '/image/maison.png',
   '/image/maison144.png',
