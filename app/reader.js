@@ -8,6 +8,7 @@ const file = [
   '/app/local/session.js',
   '/app/style.css',
   '/app/blog.css',
+  '/loding.mp3',
   '/image/maison.png',
   '/image/maison144.png',
   '/local/page/georenard/2022/noel2022.html',
