@@ -9,6 +9,7 @@ const appShellFiles = [
   '/app/style.css',
   '/app/blog.css',
   '/image/maison.png',
+  '/image/maison144.png',
 ];
 
 // Installing Service Worker
