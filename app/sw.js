@@ -16,7 +16,6 @@ const file = [
   '/local/dflip/js/libs/mockup.min.js?ver=1.7.3.5',
   '/local/dflip/js/libs/pdf.min.js?ver=1.7.3.5',
   '/local/dflip/fonts/themify.woff',
-  '/183558ac-1036-4760-812e-72e1d5e7a681',
   '/search.js',
   '/app/bar.css',
   '/app/style.css',
