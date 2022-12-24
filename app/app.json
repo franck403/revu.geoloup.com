@@ -1,0 +1,22 @@
+{
+    "name": "Geoloup - Revu Reader",
+    "short_name": "GeoReanrd",
+    "description": "Geoloup - Revu reader | made by Geoloup dev team",
+    "icons": [
+        {
+            "src": "/image/maison.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "/image/maison144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/app/reader.html",
+    "display": "fullscreen",
+    "theme_color": "#B12A34",
+    "background_color": "#B12A34"
+    
+}
