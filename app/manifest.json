@@ -7,7 +7,8 @@
             "src": "/image/maison.png",
             "sizes": "32x32",
             "type": "image/png"
-        }{
+        },
+        {
             "src": "/image/maison144.png",
             "sizes": "144x144",
             "type": "image/png"
