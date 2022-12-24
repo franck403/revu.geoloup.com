@@ -1,6 +1,6 @@
 // Files to cache
 const cacheName = 'revu-Geoloup-V1';
-const assets = [
+const appShellFiles = [
   '/app/',
   '/app/view.html',
   '/app/local/main.min.js',
@@ -17,7 +17,7 @@ self.addEventListener('install', (e) => {
   e.waitUntil((async () => {
     const cache = await caches.open(cacheName);
     console.log('[Service Worker] Caching all: app shell and content');
-    await cache.addAll(assets);
+    await cache.addAll(contentToCache);
   })());
 });
 
