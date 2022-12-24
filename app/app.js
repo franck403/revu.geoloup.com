@@ -6,6 +6,7 @@ const appShellFiles = [
   '/app/local/main.min.js',
   '/app/local/timer.js',
   '/app/local/session.js',
+  '/app/local/load.js',
   '/search.js',
   '/app/bar.css',
   '/app/style.css',
