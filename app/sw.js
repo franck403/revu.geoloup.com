@@ -31,20 +31,14 @@ const file = [
   '/local/page/georenard/2022/halloween2022.html'
 ];
 // delete cache before the rest
-self.addEventListener("activate", (event) => {
-  const cachesToKeep = ["v2"];
+self.addEventListener("activate", (e) => {
+  console.log('[Service Worker] Updating the website');
+  e.waitUntil((async () => {
+    const cache = await caches.open(cacheName);
+    console.log('[Service Worker] Clear website cache');
+    await cache.delete(file);
+  })());
 
-  event.waitUntil(
-    caches.keys().then((keyList) =>
-      Promise.all(
-        keyList.map((key) => {
-          if (!cachesToKeep.includes(key)) {
-            return caches.delete(key);
-          }
-        })
-      )
-    )
-  );
 });
 
 
