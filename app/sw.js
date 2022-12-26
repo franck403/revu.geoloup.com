@@ -10,13 +10,6 @@ const file = [
   '/app/reader.html',
   '/app/reader.js',
   'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js',
-  '/local/dflip/css/dflip.min.css',
-  '/local/dflip/css/themify-icons.min.css',
-  '/local/dflip/js/libs/jquery.min.js',
-  '/local/dflip/js/libs/three.min.js?ver=1.7.3.5',
-  '/local/dflip/js/libs/mockup.min.js?ver=1.7.3.5',
-  '/local/dflip/js/libs/pdf.min.js?ver=1.7.3.5',
-  '/local/dflip/fonts/themify.woff',
   '/search.js',
   '/app/bar.css',
   '/app/style.css',
@@ -24,11 +17,6 @@ const file = [
   '/loading.mp3',
   '/image/maison.png',
   '/image/maison144.png',
-  '/local/page/georenard/2022/noel2022.html',
-  '/local/page/georenard/2022/humain.html',
-  '/local/page/georenard/2022/olympique.html',
-  '/local/page/georenard/dieu/egypte/seth.html',
-  '/local/page/georenard/2022/halloween2022.html'
 ];
 
 
