@@ -57,13 +57,3 @@ self.addEventListener('fetch', (e) => {
 });
 
 
-// delete cache before the rest
-self.addEventListener("activate", (e) => {
-  console.log('[Service Worker] Updating the website');
-  e.waitUntil((async () => {
-    const cache = await caches.open(cacheName);
-    console.log('[Service Worker] Clear website cache');
-    await cache.delete(file);
-  })());
-
-});
