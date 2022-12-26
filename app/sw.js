@@ -57,17 +57,22 @@ self.addEventListener('fetch', (e) => {
 });
 
 
-// delete cache
-self.addEventListener("delete", (event) => {
-  console.log('[Service Worker] Delete the cache');
-  event.waitUntil(
-    caches.keys().then((keyList) =>
-      Promise.all(
-        keyList.map((key) => {
-          caches.delete(key);
-        })
+if(navigator.onLine) {
+  // delete cache
+  self.addEventListener("delete", (e) => {
+    console.log('[Service Worker] Delete the cache');
+    e.waitUntil(
+      caches.keys().then((keyList) =>
+        Promise.all(
+          keyList.map((key) => {
+            caches.delete(key);
+          })
+        )
       )
-    )
-  );
-  console.log('[Service Worker] Finish to delete the cache');
-});
+    );
+    console.log('[Service Worker] Finish to delete the cache');
+  });
+}
+else {
+  console.log("you are not online")
+}
