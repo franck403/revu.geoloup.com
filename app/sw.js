@@ -59,6 +59,7 @@ self.addEventListener('fetch', (e) => {
 
 // delete cache
 self.addEventListener("delete", (event) => {
+  console.log('[Service Worker] Delete the cache');
   event.waitUntil(
     caches.keys().then((keyList) =>
       Promise.all(
@@ -68,4 +69,5 @@ self.addEventListener("delete", (event) => {
       )
     )
   );
+  console.log('[Service Worker] Finish to delete the cache');
 });
