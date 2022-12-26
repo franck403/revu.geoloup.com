@@ -35,7 +35,7 @@ self.addEventListener('clear', (e) => {
   console.log('[Service Worker] Updating the cache');
   e.waitUntil((async () => {
     const cache = await caches.open(cacheName);
-    cache.delete("/images/image.png").then((response) => {
+    cache.delete(file).then((response) => {
       someUIUpdateFunction();
     });
     console.log('[Service Worker] Clearing the cache');
