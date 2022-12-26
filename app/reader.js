@@ -18,6 +18,8 @@ const file = [
   '/local/dflip/fonts/themify.woff',
   '/search.js',
   '/app/bar.css',
+  '/app/splash.svg',
+  'https://codepen.io/MacEvelly/pen/iJGCw.css',
   '/app/style.css',
   '/app/blog.css',
   '/loading.mp3',
