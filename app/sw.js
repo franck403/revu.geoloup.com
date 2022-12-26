@@ -30,16 +30,6 @@ const file = [
   '/local/page/georenard/dieu/egypte/seth.html',
   '/local/page/georenard/2022/halloween2022.html'
 ];
-// delete cache before the rest
-self.addEventListener("activate", (e) => {
-  console.log('[Service Worker] Updating the website');
-  e.waitUntil((async () => {
-    const cache = await caches.open(cacheName);
-    console.log('[Service Worker] Clear website cache');
-    await cache.delete(file);
-  })());
-
-});
 
 
 // Installing Service Worker
@@ -64,4 +54,16 @@ self.addEventListener('fetch', (e) => {
     cache.put(e.request, response.clone());
     return response;
   })());
+});
+
+
+// delete cache before the rest
+self.addEventListener("activate", (e) => {
+  console.log('[Service Worker] Updating the website');
+  e.waitUntil((async () => {
+    const cache = await caches.open(cacheName);
+    console.log('[Service Worker] Clear website cache');
+    await cache.delete(file);
+  })());
+
 });
