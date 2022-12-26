@@ -81,9 +81,7 @@
   </style>
   <header>
     <ul>
-      <li><a class="active" href="https://revu.geoloup.com/index.html">Home</a></li>
-      <li><a class="active" href="https://revu.geoloup.com/credit.html">Credit</a></li>
-      <li><a class="active" href="https://revu.geoloup.com/noel.html">Noel</a></li>
+      <li><a class="active" href="/app/codeview.html">Reload</a></li>
     </ul>
   </header>
   <article id="loader">
@@ -104,19 +102,11 @@
         <div class="bpl">
           <ol id='list'>
             <element id="pay">
-              <a href="reader" class="animals item-link tlist">Dernière revu lu</a>
-              <a href="reader?load=jufehi554ufleisn8l49" class="animals item-link tlist">Bibliographie - Seth dieu</a>
-              <a href="reader?load=r89n5bt895t98y5" class="animals item-link tlist">GeoRenard - les jeux olympiques</a>
-              <a href="reader?load=789iongt66re" class="animals item-link tlist">GeoRenard - les humains</a>
-              <a href="reader?load=49jj3mp489ypm389" class="animals item-link tlist">GeoRenard - Halloween</a>
-              <a href="reader?load=b4t58tb9854tb89" class="animals item-link tlist">GeoRenard - Noël</a>
-            </element>
-            <element id="free">
-              <a href="free" class="animals item-link tlist">dernière revu lu</a>
-              <a href="./free?load=b4t58tb9854tb89" class="animals item-link tlist">GeoRenard - Noël (version
-                gratuite)</a>
-              <a href="./free?load=789iongt66re" class="animals item-link tlist">GeoRenard - humain (version gratuite)
-              </a>
+              <a href="codeview?load=jufehi554ufleisn8l49" class="animals item-link tlist">Bibliographie - Seth dieu</a>
+              <a href="codeview?load=r89n5bt895t98y5" class="animals item-link tlist">GeoRenard - les jeux olympiques</a>
+              <a href="codeview?load=789iongt66re" class="animals item-link tlist">GeoRenard - les humains</a>
+              <a href="codeview?load=49jj3mp489ypm389" class="animals item-link tlist">GeoRenard - Halloween</a>
+              <a href="codeview?load=b4t58tb9854tb89" class="animals item-link tlist">GeoRenard - Noël</a>
             </element>
           </ol>
         </div>
@@ -124,8 +114,6 @@
     </div>
   </article>
 </body>
-<script src="/app/local/load.js"></script>
-
 </html>
 
 <script>
@@ -135,3 +123,35 @@
   }
   setTimeout(unsplash, 2500)
 </script>
+<iframe id="revue" src="https://revu.geoloup.com/error.html" class="rdiv" scrolling="no" frameBorder="0" allowFullScreen></iframe>
+    <script>
+        var urlparm = new URLSearchParams(window.location.search).has('load')
+        var cookierevu = document.cookie.valueOf("revu")
+        var cookielast = cookierevu.replace('revu=','')
+        document.getElementById("revue").src=laster;
+        var db = {"b4t58tb9854tb89":"/local/page/georenard/2022/noel2022.html","789iongt66re":"/local/page/georenard/2022/humain.html","r89n5bt895t98y5":"/local/page/georenard/2022/olympique.html","jufehi554ufleisn8l49":"/local/page/georenard/dieu/egypte/seth.html","49jj3mp489ypm389":"/local/page/georenard/2022/halloween2022.html"}
+        var revudb = new URLSearchParams(window.location.search).get('load')
+        var revulink = db[revudb]
+        if (urlparm == true) {
+            console.log("ok load parm si here");
+            document.getElementById("revue").src=revulink;
+            var lastr = "revu=" + new URLSearchParams(window.location.search).get('load');
+            document.cookie = lastr;
+            $('#loader').hide()
+        } 
+        else if (cookielast == "") {
+            document.getElementById("revue").src="https://revu.geoloup.com/error.html";
+        }
+        else {
+            var lastrevu = document.cookie.valueOf("revu");
+            var laster = lastrevu.replace('revu=','');
+            var revulinkcookie = db[laster];
+            console.log(revulinkcookie)
+            document.getElementById("revue").src=revulinkcookie;
+            
+            
+        }
+        console.log("finish")
+        var audio = new Audio('https://revu.geoloup.com/loading.mp3');
+        audio.play();
+    </script>
