@@ -31,16 +31,22 @@ const file = [
   '/local/page/georenard/2022/halloween2022.html'
 ];
 // delete cache before the rest
-self.addEventListener('clear', (e) => {
-  console.log('[Service Worker] Updating the cache');
-  e.waitUntil((async () => {
-    const cache = await caches.open(cacheName);
-    cache.delete(file).then((response) => {
-      someUIUpdateFunction();
-    });
-    console.log('[Service Worker] Clearing the cache');
-  })());
+self.addEventListener("activate", (event) => {
+  const cachesToKeep = ["v2"];
+
+  event.waitUntil(
+    caches.keys().then((keyList) =>
+      Promise.all(
+        keyList.map((key) => {
+          if (!cachesToKeep.includes(key)) {
+            return caches.delete(key);
+          }
+        })
+      )
+    )
+  );
 });
+
 
 // Installing Service Worker
 self.addEventListener('install', (e) => {
