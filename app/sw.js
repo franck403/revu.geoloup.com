@@ -11,7 +11,6 @@ const file = [
   '/app/reader.js',
   'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js',
   '/local/dflip/css/dflip.min.css',
-  '/local/dflip/css/dflip.min.css',
   '/local/dflip/css/themify-icons.min.css',
   '/local/dflip/js/libs/jquery.min.js',
   '/local/dflip/js/libs/three.min.js?ver=1.7.3.5',
