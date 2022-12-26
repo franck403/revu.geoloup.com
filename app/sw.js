@@ -9,6 +9,8 @@ const file = [
   '/app/local/load.js',
   '/app/reader.html',
   '/app/reader.js',
+  'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js',
+  '/local/dflip/css/dflip.min.css',
   '/local/dflip/css/dflip.min.css',
   '/local/dflip/css/themify-icons.min.css',
   '/local/dflip/js/libs/jquery.min.js',
