@@ -11,13 +11,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TimelineMax.min.js"></script>
         <script>
-        function sleep(milliseconds) {
-          const date = Date.now();
-          let currentDate = null;
-          do {
-            currentDate = Date.now();
-          } while (currentDate - date < milliseconds);
-        }
+          function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+          }
         </script>
         <script src="/app/local/session.js"></script>
         <script src="/app/app.js"></script>
