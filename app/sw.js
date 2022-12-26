@@ -57,3 +57,15 @@ self.addEventListener('fetch', (e) => {
 });
 
 
+// delete cache
+self.addEventListener("delete", (event) => {
+  event.waitUntil(
+    caches.keys().then((keyList) =>
+      Promise.all(
+        keyList.map((key) => {
+          caches.delete(key);
+        })
+      )
+    )
+  );
+});
