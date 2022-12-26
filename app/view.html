@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="bar.css">
         <script async>// delete cache before the rest
           console.log('[Service Worker] Updating the website');
-          const cache = caches.open(cacheName);
+          const cache = caches.open('revu-Geoloup-V1');
           console.log('[Service Worker] Clear website cache');
           cache.delete(file);</script>
         <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
