@@ -123,6 +123,9 @@
 </html>
 
 <script>
-  setTimeout($('#loader').show(), 5000)
-  setTimeout($('#splash').hide(), 5000)
+  function unsplash() {
+    $('#loader').show()
+    $('#splash').hide()
+  }
+  setTimeout(unsplash, 5000)
   </script>
