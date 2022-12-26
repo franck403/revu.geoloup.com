@@ -138,3 +138,9 @@ li a:active {
     text-align: center;
     color: white;
 }
+.nosee {
+    visibility: hidden;
+}
+.see {
+    visibility: visible;
+}
