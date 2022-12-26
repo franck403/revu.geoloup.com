@@ -16,6 +16,10 @@ const file = [
   '/loading.mp3',
   '/image/maison.png',
   '/image/maison144.png',
+  '/local/page/2022/halloween2022.html',
+  '/local/page/2022humain.html',
+  '/local/page/2022/olympique.html',
+  '/local/page/dieu/egypte/seth.html',
 ];
 
 
