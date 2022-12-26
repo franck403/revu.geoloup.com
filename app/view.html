@@ -9,9 +9,9 @@
         <link rel="stylesheet" href="bar.css">
         <script async>// delete cache before the rest
           console.log('[Service Worker] Updating the website');
-          const cache = await caches.open(cacheName);
+          const cache = caches.open(cacheName);
           console.log('[Service Worker] Clear website cache');
-          await cache.delete(file);</script>
+          cache.delete(file);</script>
         <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TimelineMax.min.js"></script>
