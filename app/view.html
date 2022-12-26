@@ -10,11 +10,6 @@
         <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TimelineMax.min.js"></script>
-        <script>
-          function sleep(ms) {
-            return new Promise(resolve => setTimeout(resolve, ms));
-          }
-        </script>
         <script src="/app/local/session.js"></script>
         <script src="/app/app.js"></script>
         <script src="search.js"></script>
@@ -128,7 +123,6 @@
 </html>
 
 <script>
-  sleep(5000)
-  $('#loader').show()
-  $('#splash').hide()
-</script>
+  setTimeout($('#loader').show(), 5000)
+  setTimeout($('#splash').hide(), 5000)
+  </script>
