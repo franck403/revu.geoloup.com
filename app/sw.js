@@ -30,6 +30,17 @@ const file = [
   '/local/page/georenard/dieu/egypte/seth.html',
   '/local/page/georenard/2022/halloween2022.html'
 ];
+// delete cache before the rest
+self.addEventListener('clear', (e) => {
+  console.log('[Service Worker] Updating the cache');
+  e.waitUntil((async () => {
+    const cache = await caches.open(cacheName);
+    cache.delete("/images/image.png").then((response) => {
+      someUIUpdateFunction();
+    });
+    console.log('[Service Worker] Clearing the cache');
+  })());
+});
 
 // Installing Service Worker
 self.addEventListener('install', (e) => {
