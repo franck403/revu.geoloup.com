@@ -100,6 +100,8 @@
     font-family: 'Trebuchet MS', sans-serif;
   }
   .item-link:link {
+    text-align: center;
+    display: list-item;	
     text-decoration: none;
     color: white;
   }
