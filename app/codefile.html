@@ -121,8 +121,23 @@
   $('#loader').hide()
   $('#splash').show()
 </script>
+
 </html>
 <script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker
+      .then((registration) => {
+        // registration worked
+        console.log("Registration succeeded.");
+        registration.unregister().then((boolean) => {
+          // if boolean = true, unregister is successful
+        });
+      })
+      .catch((error) => {
+        // registration failed
+        console.error(`Registration failed with ${error}`);
+      });
+  }
   function relaod() {
     $('#revue').hide()
     $('#loader').show()
@@ -151,6 +166,6 @@
     $('#loader').hide()
     iframel();
     console.log(load)
-    setTimeout(reader, 2000,load);
+    setTimeout(reader, 2000, load);
   }
 </script>
