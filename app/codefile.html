@@ -132,7 +132,7 @@
 
     // provide height and width to it
     iframe.setAttribute("class", "rdiv");
-    iframe.setAttribute("id", "revu");
+    iframe.setAttribute("id", "revue");
     iframe.setAttribute("src", "./error.html");
   }
   function reader(load) {
@@ -140,6 +140,7 @@
     var revudb = load
     console.log(load)
     var revulink = db[revudb]
+    console.log(revulink)
     document.getElementById("revue").src = revulink;
     $('#read').show()
   }
