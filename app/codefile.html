@@ -87,7 +87,7 @@
   </style>
   <header>
     <ul>
-      <li><a class="active" href="/app/codeview.html">Reload</a></li>
+      <li><a class="active" onclick='reload()'>Recharger</a></li>
     </ul>
   </header>
   <article id="loader">
@@ -115,22 +115,20 @@
       </div>
     </div>
   </article>
-  <div id="read"></div>
 </body>
 
 <script>
-  $('#read').hide()
   $('#loader').hide()
   $('#splash').show()
 </script>
 </html>
 <script>
+  function relaod() {
+    $('#revue').hide()
+    $('#loader').show()
+  }
   function iframel() {
     var iframe = document.createElement('iframe');
-    // div tag in which iframe will be added should have id attribute with value myDIV
-    document.getElementById("read").appendChild(iframe);
-
-    // provide height and width to it
     iframe.setAttribute("class", "rdiv");
     iframe.setAttribute("id", "revue");
     iframe.setAttribute("src", "./error.html");
@@ -142,7 +140,7 @@
     var revulink = db[revudb]
     console.log(revulink)
     document.getElementById("revue").src = revulink;
-    $('#read').show()
+    $('#revue').show()
   }
   function unsplash() {
     $('#loader').show()
