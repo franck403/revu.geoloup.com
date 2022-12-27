@@ -146,10 +146,10 @@
     $('#loader').show()
     $('#splash').hide()
   }
-  setTimeout(unsplash, 2500)
+  setTimeout(unsplash, 2300)
   function read(load) {
     $('#loader').hide()
     iframel();
-    reader(load);
+    setTimeout(reader, 2000,load);
   }
 </script>
