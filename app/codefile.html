@@ -5,9 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="list.css">
-  <link rel="stylesheet" href="bar.css">
+  <link rel="stylesheet" href="/app/style.css">
+  <link rel="manifest" href="/app/manifest.json">
+  <link rel="stylesheet" href="/app/blog.css">
+  <script src="/app/local/main.min.js"></script>
+  <script src="/app/local/session.js"></script>
+  <!-- <script src="/app/lauch.js"></script> -->
+  <link rel="stylesheet" href="/app/list.css">
+  <link rel="stylesheet" href="/app/bar.css">
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
@@ -102,56 +107,58 @@
         <div class="bpl">
           <ol id='list'>
             <element id="pay">
-              <a href="codeview?load=jufehi554ufleisn8l49" class="animals item-link tlist">Bibliographie - Seth dieu</a>
-              <a href="codeview?load=r89n5bt895t98y5" class="animals item-link tlist">GeoRenard - les jeux olympiques</a>
-              <a href="codeview?load=789iongt66re" class="animals item-link tlist">GeoRenard - les humains</a>
-              <a href="codeview?load=49jj3mp489ypm389" class="animals item-link tlist">GeoRenard - Halloween</a>
-              <a href="codeview?load=b4t58tb9854tb89" class="animals item-link tlist">GeoRenard - Noël</a>
+              <a onclick='read("jufehi554ufleisn8l49")' class="animals item-link tlist">Bibliographie - Seth dieu</a>
+              <a onclick='read("r89n5bt895t98y5")' class="animals item-link tlist">GeoRenard - les jeux
+                olympiques</a>
+              <a onclick='read("789iongt66re")' class="animals item-link tlist">GeoRenard - les humains</a>
+              <a onclick='read("49jj3mp489ypm389")' class="animals item-link tlist">GeoRenard - Halloween</a>
+              <a onclick='read("b4t58tb9854tb89")' class="animals item-link tlist">GeoRenard - Noël</a>
             </element>
           </ol>
         </div>
       </div>
     </div>
   </article>
+  <div id="read"></div>
 </body>
-</html>
 
+</html>
+<iframe id="revue" src="https://revu.geoloup.com/error.html" class="rdiv" scrolling="no" frameBorder="0"
+  allowFullScreen></iframe>
 <script>
+  function iframel() {
+    var iframe = document.createElement('iframe');
+    // div tag in which iframe will be added should have id attribute with value myDIV
+    document.getElementById("read").appendChild(iframe);
+
+    // provide height and width to it
+    iframe.setAttribute("class", "rdiv");
+  }
+  function reader() {
+    var urlparm = new URLSearchParams(window.location.search).has('load')
+    var cookierevu = document.cookie.valueOf("revu")
+    var cookielast = cookierevu.replace('revu=', '')
+    document.getElementById("revue").src = laster;
+    var db = { "b4t58tb9854tb89": "/local/page/georenard/2022/noel2022.html", "789iongt66re": "/local/page/georenard/2022/humain.html", "r89n5bt895t98y5": "/local/page/georenard/2022/olympique.html", "jufehi554ufleisn8l49": "/local/page/georenard/dieu/egypte/seth.html", "49jj3mp489ypm389": "/local/page/georenard/2022/halloween2022.html" }
+    var revudb = new URLSearchParams(window.location.search).get('load')
+    var revulink = db[revudb]
+    console.log("ok load parm si here");
+    document.getElementById("revue").src = revulink;
+    var lastr = "revu=" + new URLSearchParams(window.location.search).get('load');
+    document.cookie = lastr;
+  }
   function unsplash() {
     $('#loader').show()
     $('#splash').hide()
   }
   setTimeout(unsplash, 2500)
+  var lastrevu = document.cookie.valueOf("revu");
+  var laster = lastrevu.replace('revu=', '');
+  var revulinkcookie = db[laster];
+  console.log(revulinkcookie)
+  document.getElementById("revue").src = revulinkcookie;
+  function read(load) {
+    $('#loader').hide()
+
+  }
 </script>
-<iframe id="revue" src="https://revu.geoloup.com/error.html" class="rdiv" scrolling="no" frameBorder="0" allowFullScreen></iframe>
-    <script>
-        var urlparm = new URLSearchParams(window.location.search).has('load')
-        var cookierevu = document.cookie.valueOf("revu")
-        var cookielast = cookierevu.replace('revu=','')
-        document.getElementById("revue").src=laster;
-        var db = {"b4t58tb9854tb89":"/local/page/georenard/2022/noel2022.html","789iongt66re":"/local/page/georenard/2022/humain.html","r89n5bt895t98y5":"/local/page/georenard/2022/olympique.html","jufehi554ufleisn8l49":"/local/page/georenard/dieu/egypte/seth.html","49jj3mp489ypm389":"/local/page/georenard/2022/halloween2022.html"}
-        var revudb = new URLSearchParams(window.location.search).get('load')
-        var revulink = db[revudb]
-        if (urlparm == true) {
-            console.log("ok load parm si here");
-            document.getElementById("revue").src=revulink;
-            var lastr = "revu=" + new URLSearchParams(window.location.search).get('load');
-            document.cookie = lastr;
-            $('#loader').hide()
-        } 
-        else if (cookielast == "") {
-            document.getElementById("revue").src="https://revu.geoloup.com/error.html";
-        }
-        else {
-            var lastrevu = document.cookie.valueOf("revu");
-            var laster = lastrevu.replace('revu=','');
-            var revulinkcookie = db[laster];
-            console.log(revulinkcookie)
-            document.getElementById("revue").src=revulinkcookie;
-            
-            
-        }
-        console.log("finish")
-        var audio = new Audio('https://revu.geoloup.com/loading.mp3');
-        audio.play();
-    </script>
