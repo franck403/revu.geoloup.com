@@ -134,10 +134,10 @@
     iframe.setAttribute("class", "rdiv");
     iframe.addAttribute("id", "revu");
   }
-  function reader() {
+  function reader(load) {
     document.getElementById("revue").src = laster;
     var db = { "b4t58tb9854tb89": "/local/page/georenard/2022/noel2022.html", "789iongt66re": "/local/page/georenard/2022/humain.html", "r89n5bt895t98y5": "/local/page/georenard/2022/olympique.html", "jufehi554ufleisn8l49": "/local/page/georenard/dieu/egypte/seth.html", "49jj3mp489ypm389": "/local/page/georenard/2022/halloween2022.html" }
-    var revudb = new URLSearchParams(window.location.search).get('load')
+    var revudb = load
     var revulink = db[revudb]
     console.log("ok load parm si here");
     document.getElementById("revue").src = revulink;
@@ -150,5 +150,7 @@
   setTimeout(unsplash, 2500)
   function read(load) {
     $('#loader').hide()
+    iframel();
+    reader(load);
   }
 </script>
