@@ -151,8 +151,7 @@
   function read(load) {
     $('#loader').hide()
     iframel();
-    console.log(load);
-    read(load);
+    setTimeout(reader, 1000,load)
   }
   function reload() {
     $('#revue').hide()
