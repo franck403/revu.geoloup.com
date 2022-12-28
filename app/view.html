@@ -148,6 +148,11 @@
     return "";
   }
   function iframel() {
+    var element = document.getElementById("test");
+    if(typeof(element) != 'undefined' && element != null){  
+      const element = document.getElementById("revue");
+      element.remove();
+    } else{}
     var iframe = document.createElement('iframe');
     document.getElementById("body").appendChild(iframe);
     iframe.setAttribute("class", "rdiv");
