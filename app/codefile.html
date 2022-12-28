@@ -88,7 +88,6 @@
   <header>
     <ul id="nav">
       <li><a class="active" onclick='reload()'>Recharger</a></li>
-      <li id="timerpla"></li>
     </ul>
   </header>
   <article id="loader">
@@ -129,12 +128,6 @@
 
 </html>
 <script>
-  function timer() {
-    var timenav = document.createElement('a')
-    document.getElementById("timerplace").appendChild(timenav);
-    timenav.setAttribute("class","active")
-    timenav.setAttribute("id","timer")
-  }
   function iframel() {
     var iframe = document.createElement('iframe');
     document.getElementById("reader").appendChild(iframe);
@@ -161,21 +154,8 @@
     timer();
     console.log(load);
     read(load);
-    if (typeof (Worker) !== "undefined") {
-      w = new Worker("/app/local/timer.js");
-      w.onmessage = function (event) {
-        var lastr = "temps de lecture : " + event.data + "minutes";
-        document.getElementById("timer").innerHTML = lastr;
-      }
-    }
-    else {
-      alert("worker are not working");
-      console.log("worker are desactivated");
-    }
   }
   function reload() {
-    const element = document.getElementById("timer");
-    element.remove()
     $('#revue').hide()
     $('#loader').show()
     w.terminate();
