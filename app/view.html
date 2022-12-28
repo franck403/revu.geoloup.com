@@ -159,7 +159,7 @@
     var db = { "b4t58tb9854tb89": "/local/page/georenard/2022/noel2022.html", "789iongt66re": "/local/page/georenard/2022/humain.html", "r89n5bt895t98y5": "/local/page/georenard/2022/olympique.html", "jufehi554ufleisn8l49": "/local/page/georenard/dieu/egypte/seth.html", "49jj3mp489ypm389": "/local/page/georenard/2022/halloween2022.html" }
     if (load == "last") {
       if (typeof (Storage) !== "undefined") {
-        revudb = document.getElementById("result").innerHTML = localStorage.getItem("lastrevu");
+        revudb = localStorage.getItem("lastrevu");
         var revulink = db[revudb]
       }
       else {
