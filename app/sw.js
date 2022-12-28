@@ -1,7 +1,6 @@
 // Files to cache
 const cacheName = 'revu-Geoloup-V1';
 const file = [
-  '/app/',
   '/app/local/main.min.js',
   '/app/local/timer.js',
   '/app/local/session.js',
