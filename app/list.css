@@ -26,7 +26,7 @@ input[type=text] {
 /* When the input field gets focus,
           change its width to 100% */
 input[type=text]:focus {
-  transform: translate(-369px);
+  transform: translate(-184.5px);
   width: 150%;
 }
 
