@@ -118,6 +118,7 @@
       </div>
     </div>
   </article>
+  <div id="reader">
 </body>
 
 <script>
@@ -133,6 +134,7 @@
   }
   function iframel() {
     var iframe = document.createElement('iframe');
+    document.getElementById("reader").appendChild(iframe);
     iframe.setAttribute("class", "rdiv");
     iframe.setAttribute("id", "revue");
     iframe.setAttribute("src", "./error.html");
