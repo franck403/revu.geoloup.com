@@ -95,7 +95,7 @@
     <div>
       <div class="fmain" style="margin-top:10vh">
         <div class="bpl">
-        <input id="searchbar" onkeyup="search_revu()" type="text" name="search" placeholder="Rechercher une revu ...">
+          <input id="searchbar" onkeyup="search_revu()" type="text" name="search" placeholder="Rechercher une revu ...">
         </div>
       </div>
       <div class="smain">
@@ -129,10 +129,6 @@
 
 </html>
 <script>
-  function reload() {
-    $('#revue').hide()
-    $('#loader').show()
-  }
   function iframel() {
     var iframe = document.createElement('iframe');
     document.getElementById("reader").appendChild(iframe);
@@ -159,5 +155,22 @@
     iframel();
     console.log(load)
     setTimeout(reader, 2000, load);
+    if (typeof (Worker) !== "undefined") {
+      w = new Worker("/app/local/timer.js");
+      w.onmessage = function (event) {
+        var lastr = "temps de lecture : " + event.data + "minutes";
+        document.getElementById("timer").innerHTML = lastr;
+      }
+    }
+    else {
+      alert("worker are not working");
+      console.log("worker are desactivated");
+    }
+  }
+  function reload() {
+    $('#revue').hide()
+    $('#loader').show()
+    w.terminate();
+    w = undefined;
   }
 </script>
