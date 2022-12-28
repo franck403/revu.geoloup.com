@@ -88,7 +88,6 @@
   <header>
     <ul id="nav">
       <li><a class="active" onclick='reload()'>Recharger</a></li>
-      <li><a class="active" id="timer"></a></li>
     </ul>
   </header>
   <article id="loader">
@@ -173,7 +172,7 @@
     }
   }
   function reload() {
-    getElementById("timer").remove()
+    document.getElementById("timer").remove()
     $('#revue').hide()
     $('#loader').show()
     w.terminate();
