@@ -8,12 +8,14 @@
 .input {
   color: red;
   text-align: right
+  
 }
 
 #searchbar {
   margin-left: 15%;
   padding: 15px;
   border-radius: 10px;
+  float:center;
 }
 
 input[type=text] {
@@ -26,7 +28,7 @@ input[type=text] {
           change its width to 100% */
 input[type=text]:focus {
   width: 150%;
-  margin-left: 0vw;
+  float:left;
 }
 
 #list {
