@@ -157,8 +157,9 @@
   function read(load) {
     $('#loader').hide()
     iframel();
-    console.log(load)
-    setTimeout(reader, 2000, load);
+    timer();
+    console.log(load);
+    read(load);
     if (typeof (Worker) !== "undefined") {
       w = new Worker("/app/local/timer.js");
       w.onmessage = function (event) {
