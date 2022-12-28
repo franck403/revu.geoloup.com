@@ -88,6 +88,7 @@
   <header>
     <ul id="nav">
       <li><a class="active" onclick='reload()'>Recharger</a></li>
+      <li id="timerpla"></li>
     </ul>
   </header>
   <article id="loader">
@@ -129,9 +130,6 @@
 </html>
 <script>
   function timer() {
-    var timepla = document.createElement('li')
-    document.getElementById("nav").appendChild(timepla);
-    timenav.setAttribute("id","timerpla")
     var timenav = document.createElement('a')
     document.getElementById("timerplace").appendChild(timenav);
     timenav.setAttribute("class","active")
