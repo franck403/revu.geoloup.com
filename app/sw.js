@@ -7,7 +7,6 @@ const file = [
   '/app/local/session.js',
   '/app/local/load.js',
   '/app/reader.js',
-  'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js',
   '/search.js',
   '/app/bar.css',
   '/app/style.css',
