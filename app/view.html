@@ -5,15 +5,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="list.css">
-  <link rel="stylesheet" href="bar.css">
+  <link rel="stylesheet" href="/app/blog.css">
+  <link rel="manifest" href="/app/manifest.json">
+  <link rel="stylesheet" href="/app/blog.css">
+  <script src="/app/local/session.js"></script>
+  <script src="/app/app.js"></script>
+  <link rel="stylesheet" href="/app/list.css">
+  <link rel="stylesheet" href="/app/style.css">
+  <link rel="stylesheet" href="/app/bar.css">
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TimelineMax.min.js"></script>
-  <script src="/app/local/session.js"></script>
-  <script src="/app/app.js"></script>
   <script src="search.js"></script>
   <link rel="manifest" href="/app/manifest.json" />
   <!-- ios support -->
@@ -24,7 +27,7 @@
   <link rel="icon" href="https://revu.geoloup.com/image/maison.png">
 </head>
 
-<body>
+<body id="body" style="padding: 0px;">
   <div id="splash"></div>
   <script>
     (function ($) {
@@ -80,58 +83,80 @@
     }
   </style>
   <header>
-    <ul>
+    <ul id="nav">
       <li><a class="active" href="https://revu.geoloup.com/index.html">Home</a></li>
       <li><a class="active" href="https://revu.geoloup.com/credit.html">Credit</a></li>
-      <li><a class="active" href="https://revu.geoloup.com/noel.html">Noel</a></li>
+      <li><a class="active" onclick='reload()'>Lire une autre revue</a></li>
     </ul>
   </header>
   <article id="loader">
-
-    <script>
-      $('#loader').hide()
-      $('#splash').show()
-    </script>
     <div>
-      <div class="fmain">
+      <div class="fmain" style="margin-top:10vh">
         <div class="bpl">
-          <!-- input tag -->
           <input id="searchbar" onkeyup="search_revu()" type="text" name="search" placeholder="Rechercher une revu ...">
-          <!-- ordered list -->
         </div>
       </div>
       <div class="smain">
         <div class="bpl">
-          <ol id='list'>
+          <ol id='list' style="margin-bottom:-20vh">
             <element id="pay">
-              <a href="reader" class="animals item-link tlist">Dernière revu lu</a>
-              <a href="reader?load=jufehi554ufleisn8l49" class="animals item-link tlist">Bibliographie - Seth dieu</a>
-              <a href="reader?load=r89n5bt895t98y5" class="animals item-link tlist">GeoRenard - les jeux olympiques</a>
-              <a href="reader?load=789iongt66re" class="animals item-link tlist">GeoRenard - les humains</a>
-              <a href="reader?load=49jj3mp489ypm389" class="animals item-link tlist">GeoRenard - Halloween</a>
-              <a href="reader?load=b4t58tb9854tb89" class="animals item-link tlist">GeoRenard - Noël</a>
-            </element>
-            <element id="free">
-              <a href="free" class="animals item-link tlist">dernière revu lu</a>
-              <a href="./free?load=b4t58tb9854tb89" class="animals item-link tlist">GeoRenard - Noël (version
-                gratuite)</a>
-              <a href="./free?load=789iongt66re" class="animals item-link tlist">GeoRenard - humain (version gratuite)
-              </a>
+              <a onclick='read("jufehi554ufleisn8l49")' style="color:white;text-align:left;"
+                class="animals item-link tlist">Bibliographie - Seth dieu</a>
+              <a onclick='read("r89n5bt895t98y5")' style="color:white;text-align:left;"
+                class="animals item-link tlist">GeoRenard - les jeux
+                olympiques</a>
+              <a onclick='read("789iongt66re")' style="color:white;text-align:left;"
+                class="animals item-link tlist">GeoRenard - les humains</a>
+              <a onclick='read("49jj3mp489ypm389")' style="color:white;text-align:left;"
+                class="animals item-link tlist">GeoRenard - Halloween</a>
+              <a onclick='read("b4t58tb9854tb89")' style="color:white;text-align:left;"
+                class="animals item-link tlist">GeoRenard - Noël</a>
             </element>
           </ol>
         </div>
       </div>
     </div>
   </article>
+  <div id="reader">
 </body>
-<script src="/app/local/load.js"></script>
-
-</html>
 
 <script>
+  $('#loader').hide()
+  $('#splash').show()
+</script>
+
+</html>
+<script>
+  function iframel() {
+    var iframe = document.createElement('iframe');
+    document.getElementById("body").appendChild(iframe);
+    iframe.setAttribute("class", "rdiv");
+    iframe.setAttribute("id", "revue");
+    iframe.setAttribute("scrolling","no")
+    iframe.setAttribute("frameborder","0")
+    iframe.setAttribute("allowfullscreen","True")
+  }
+  function reader(load) {
+    var db = { "b4t58tb9854tb89": "/local/page/georenard/2022/noel2022.html", "789iongt66re": "/local/page/georenard/2022/humain.html", "r89n5bt895t98y5": "/local/page/georenard/2022/olympique.html", "jufehi554ufleisn8l49": "/local/page/georenard/dieu/egypte/seth.html", "49jj3mp489ypm389": "/local/page/georenard/2022/halloween2022.html" }
+    var revudb = load
+    console.log(load)
+    var revulink = db[revudb]
+    console.log(revulink)
+    document.getElementById("revue").src = revulink;
+    $('#revue').show()
+  }
   function unsplash() {
     $('#loader').show()
     $('#splash').hide()
   }
-  setTimeout(unsplash, 2500)
+  setTimeout(unsplash, 2300)
+  function read(load) {
+    $('#loader').hide()
+    iframel();
+    setTimeout(reader, 1000,load)
+  }
+  function reload() {
+    $('#revue').hide()
+    $('#loader').show()
+  }
 </script>
