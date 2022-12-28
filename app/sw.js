@@ -1,23 +1,6 @@
 // Files to cache
 const cacheName = 'revu-Geoloup-V1';
-const file = [
-  '/app/local/main.min.js',
-  '/app/local/timer.js',
-  '/app/local/session.js',
-  '/app/local/load.js',
-  '/app/reader.js',
-  '/search.js',
-  '/app/bar.css',
-  '/app/style.css',
-  '/app/blog.css',
-  '/loading.mp3',
-  '/image/maison.png',
-  '/image/maison144.png',
-  '/local/page/2022/noel2022.html',
-  '/local/page/2022/halloween2022.html',
-  '/local/page/2022humain.html',
-  '/local/page/2022/olympique.html',
-  '/local/page/dieu/egypte/seth.html',
+const file = ['/app/local/timer.js'
 ];
 
 
