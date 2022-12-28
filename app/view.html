@@ -97,7 +97,8 @@
         <div class="bpl">
           <ol id='list' style="margin-bottom:-20vh">
             <element id="pay">
-              <a onclick='read("last")' style="color:white;text-align:left;" class="animals item-link tlist">Ta dèrnière revu que tu a lu</a>
+              <a onclick='read("last")' style="color:white;text-align:left;" class="animals item-link tlist">Ta dèrnière
+                revu que tu a lu</a>
               <a onclick='read("jufehi554ufleisn8l49")' style="color:white;text-align:left;"
                 class="animals item-link tlist">Bibliographie - Seth dieu</a>
               <a onclick='read("r89n5bt895t98y5")' style="color:white;text-align:left;"
@@ -176,7 +177,8 @@
         localStorage.setItem("lastrevu", load);
       }
       else {
-        document.cookie = "lastrevu=" + load;}
+        document.cookie = "lastrevu=" + load;
+      }
     }
     console.log(revulink)
     document.getElementById("revue").src = revulink;
@@ -190,7 +192,7 @@
   function read(load) {
     $('#loader').hide()
     iframel();
-    setTimeout(reader, 1000, load)
+    setTimeout(reader, 0001, load)
   }
   function reload() {
     $('#revue').hide()
