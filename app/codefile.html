@@ -174,7 +174,8 @@
     }
   }
   function reload() {
-    document.getElementById("timer").remove()
+    const element = document.getElementById("timer");
+    element.remove()
     $('#revue').hide()
     $('#loader').show()
     w.terminate();
