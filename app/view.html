@@ -66,7 +66,6 @@
     })()
   </script>
   <style>
-
     #splash {
       position: absolute;
       border: 1px solid black;
@@ -98,6 +97,8 @@
         <div class="bpl">
           <ol id='list' style="margin-bottom:-20vh">
             <element id="pay">
+              <a onclick='read("last")' style="color:white;text-align:left;" class="animals item-link tlist">GeoRenard -
+                Noël</a>
               <a onclick='read("jufehi554ufleisn8l49")' style="color:white;text-align:left;"
                 class="animals item-link tlist">Bibliographie - Seth dieu</a>
               <a onclick='read("r89n5bt895t98y5")' style="color:white;text-align:left;"
@@ -125,20 +126,59 @@
 
 </html>
 <script>
+  function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    let expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+  function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
   function iframel() {
     var iframe = document.createElement('iframe');
     document.getElementById("body").appendChild(iframe);
     iframe.setAttribute("class", "rdiv");
     iframe.setAttribute("id", "revue");
-    iframe.setAttribute("scrolling","no")
-    iframe.setAttribute("frameborder","0")
-    iframe.setAttribute("allowfullscreen","True")
+    iframe.setAttribute("scrolling", "no")
+    iframe.setAttribute("frameborder", "0")
+    iframe.setAttribute("allowfullscreen", "True")
   }
   function reader(load) {
     var db = { "b4t58tb9854tb89": "/local/page/georenard/2022/noel2022.html", "789iongt66re": "/local/page/georenard/2022/humain.html", "r89n5bt895t98y5": "/local/page/georenard/2022/olympique.html", "jufehi554ufleisn8l49": "/local/page/georenard/dieu/egypte/seth.html", "49jj3mp489ypm389": "/local/page/georenard/2022/halloween2022.html" }
-    var revudb = load
-    console.log(load)
-    var revulink = db[revudb]
+    if (load == "last") {
+      if (typeof (Storage) !== "undefined") {
+        revudb = document.getElementById("result").innerHTML = localStorage.getItem("lastrevu");
+        var revulink = db[revudb]
+      }
+      else {
+        var revudb = getCookie("lastrevu=");
+        console.log(load);
+        var revulink = db[revudb];
+      }
+    }
+    else {
+      var revudb = load
+      console.log(load)
+      var revulink = db[revudb]
+      if (typeof (Storage) !== "undefined") {
+        localStorage.setItem("lastrevu", load);
+      }
+      else {
+        document.cookie = "lastrevu=" + load;}
+    }
     console.log(revulink)
     document.getElementById("revue").src = revulink;
     $('#revue').show()
@@ -151,7 +191,7 @@
   function read(load) {
     $('#loader').hide()
     iframel();
-    setTimeout(reader, 1000,load)
+    setTimeout(reader, 1000, load)
   }
   function reload() {
     $('#revue').hide()
