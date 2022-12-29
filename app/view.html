@@ -204,6 +204,7 @@
     setTimeout(reader, 0001, load)
   }
   function reload() {
+    window.top.document.title = "GeoRenard"
     $('#revue').hide()
     $('#loader').show()
   }
