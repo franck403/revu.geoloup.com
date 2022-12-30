@@ -175,10 +175,9 @@
 
       pos++;
       if (pos > ml) pos = 0;
-      window.setTimeout("live()", speed);
+      window.setTimeout("moveTitle()", speed);
     }
-    function live() {window.setTimeout("moveTitle()", speed);}
-    moveTitle();
+    moveTitle()
   }
   function reader(load) {
     var audio = new Audio('https://revu.geoloup.com/loading.mp3');
