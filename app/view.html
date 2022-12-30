@@ -90,14 +90,16 @@
     <div>
       <div class="fmain" style="margin-top:10vh">
         <div class="bpl">
-          <input id="searchbar" onkeyup="search_revu()" type="text" name="search" placeholder="Rechercher une revue ...">
+          <input id="searchbar" onkeyup="search_revu()" type="text" name="search"
+            placeholder="Rechercher une revue ...">
         </div>
       </div>
       <div class="smain">
         <div class="bpl">
           <ol id='list' style="margin-bottom:-20vh">
             <element id="pay">
-              <a onclick='read("last")' style="color:white;text-align:left;" class="animals item-link tlist">La dernière revue que tu as lue</a>
+              <a onclick='read("last")' style="color:white;text-align:left;" class="animals item-link tlist">La dernière
+                revue que tu as lue</a>
               <a onclick='read("jufehi554ufleisn8l49")' style="color:white;text-align:left;"
                 class="animals item-link tlist">Bibliographie - Seth dieu</a>
               <a onclick='read("r89n5bt895t98y5")' style="color:white;text-align:left;"
@@ -148,10 +150,10 @@
   }
   function iframel() {
     var element = document.getElementById("revue");
-    if(typeof(element) != 'undefined' && element != null){  
+    if (typeof (element) != 'undefined' && element != null) {
       const element = document.getElementById("revue");
       element.remove();
-    } else{}
+    } else { }
     var iframe = document.createElement('iframe');
     document.getElementById("body").appendChild(iframe);
     iframe.setAttribute("class", "rdiv");
@@ -159,6 +161,24 @@
     iframe.setAttribute("scrolling", "no")
     iframe.setAttribute("frameborder", "0")
     iframe.setAttribute("allowfullscreen", "True")
+  }
+  function title() {
+    var msg = window.top.document.title;
+    var speed = 150;
+    var endChar = "... ";
+    var pos = 0;
+    function moveTitle() {
+      var ml = msg.length;
+
+      title = msg.substr(pos, ml) + endChar + msg.substr(0, pos);
+      document.title = title;
+
+      pos++;
+      if (pos > ml) pos = 0;
+      window.setTimeout("moveTitle()", speed);
+    }
+
+    moveTitle();
   }
   function reader(load) {
     var audio = new Audio('https://revu.geoloup.com/loading.mp3');
