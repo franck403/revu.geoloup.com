@@ -11,7 +11,6 @@
 }
 
 #searchbar {
-  margin-left: 15%;
   padding: 15px;
   border-radius: 10px;
   transition: 0.3s;
@@ -33,7 +32,6 @@ input[type=text]:focus {
 
 #list {
   font-size: 1.5em;
-  margin-left: 90px;
 }
 
 .animals {
