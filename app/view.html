@@ -111,6 +111,8 @@
                 class="animals item-link tlist">GeoRenard - Halloween</a>
               <a onclick='read("b4t58tb9854tb89")' style="color:white;text-align:left;"
                 class="animals item-link tlist">GeoRenard - Noël</a>
+              <a onclick='read("oi5hhfsatb9p5rfi")' style="color:white;text-align:left;"
+                class="animals item-link tlist">GeoRenard - Nouvel ans</a>
             </element>
           </ol>
         </div>
@@ -182,8 +184,8 @@
   function reader(load) {
     var audio = new Audio('https://revu.geoloup.com/loading.mp3');
     audio.play();
-    var db = { "b4t58tb9854tb89": "/local/page/georenard/2022/noel2022.html", "789iongt66re": "/local/page/georenard/2022/humain.html", "r89n5bt895t98y5": "/local/page/georenard/2022/olympique.html", "jufehi554ufleisn8l49": "/local/page/georenard/dieu/egypte/seth.html", "49jj3mp489ypm389": "/local/page/georenard/2022/halloween2022.html" }
-    var textdb = { "b4t58tb9854tb89": "Noël", "789iongt66re": "Les humains", "r89n5bt895t98y5": "L'histoire des jeux olympique", "jufehi554ufleisn8l49": "le dieu d'égypte seth", "49jj3mp489ypm389": "Halloween" }
+    var db = { "b4t58tb9854tb89": "/local/page/georenard/2022/noel2022.html","oi5hhfsatb9p5rfi":"/local/page/georenard/2023/nouvelans.html", "789iongt66re": "/local/page/georenard/2022/humain.html", "r89n5bt895t98y5": "/local/page/georenard/2022/olympique.html", "jufehi554ufleisn8l49": "/local/page/georenard/dieu/egypte/seth.html", "49jj3mp489ypm389": "/local/page/georenard/2022/halloween2022.html" }
+    var textdb = { "b4t58tb9854tb89": "Noël","oi5hhfsatb9p5rfi":"Nouvel Ans", "789iongt66re": "Les humains", "r89n5bt895t98y5": "L'histoire des jeux olympique", "jufehi554ufleisn8l49": "le dieu d'égypte seth", "49jj3mp489ypm389": "Halloween" }
     if (load == "last") {
       if (typeof (Storage) !== "undefined") {
         revudb = localStorage.getItem("lastrevu");
