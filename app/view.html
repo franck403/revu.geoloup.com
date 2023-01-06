@@ -232,6 +232,8 @@
   }
   function reload() {
     window.top.document.title = "GeoRenard"
+    var audio = new Audio('https://revu.geoloup.com/loading.mp3');
+    audio.pause();
     $('#revue').hide()
     $('#loader').show()
   }
