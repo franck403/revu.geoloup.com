@@ -129,6 +129,46 @@
 
 </html>
 <script>
+  function splaload() 
+  {
+    $('#splash').hide()
+    (function ($) {
+      var splashSVG = "/app/splash.svg"
+      $.fn.mySplash = function (titleScreen) {
+        var splashHolder = this
+        function triggerFade() {
+          if (titleScreen) TweenMax.set(titleScreen, { autoAlpha: 1 })
+          $(splashHolder).trigger('splashFade')
+        }
+        function triggerDone() { $(splashHolder).trigger('splashDone') }
+        var animateSplash = function () {
+          $('svg', this).css({
+            'height': '50%',
+            'width': '50%',
+            'position': 'absolute',
+            'margin': 'auto',
+            'top': '0px',
+            'bottom': '0px',
+            'left': '0px',
+            'right': '1px'
+          })
+
+          var tl = new TimelineMax()
+          tl.to(splashHolder, .5, { autoAlpha: 1 })
+          tl.staggerFromTo($('#text path', this), 0.5, { alpha: 0 }, { alpha: 1 }, 0.015)
+          tl.staggerFromTo($('#script path', this), 0.5, { alpha: 0 }, { alpha: 1 }, 0.07)
+          tl.add(triggerFade)
+          tl.to(splashHolder, .5, { autoAlpha: 0, delay: 0.75 })
+          tl.add(triggerDone)
+        }
+        $(splashHolder).load(splashSVG, animateSplash)
+      }
+    }(jQuery));
+    (function () {
+      $('#splash').mySplash()
+    })()
+  }
+
   function setCookie(cname, cvalue, exdays) {
     const d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
@@ -216,10 +256,19 @@
     $('#revue').show()
     title()
   }
+
+  function ifsplash() {
+    document.getElementById("body").style.height = "90vh";
+    $('#loader').hide()
+    $('#splash').hide()
+  }
   function unsplash() {
     document.getElementById("body").style.height = "90vh";
     $('#loader').show()
     $('#splash').hide()
+  }
+  function revuload() {
+    setTimeout(unsplash, 2300)
   }
   setTimeout(unsplash, 2300)
   function read(load) {
@@ -230,6 +279,8 @@
   }
   function reload() {
     window.top.document.title = "GeoRenard"
+    splaload()
+    revuload()
     $('#revue').hide()
     $('#loader').show()
   }
