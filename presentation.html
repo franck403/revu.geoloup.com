@@ -32,10 +32,6 @@
 }
 
 .video-container {
-    animation: fadeOut 1s;
-    animation-fill-mode: forwards;
-}
-.video-container.show {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -43,7 +39,7 @@
   height: 99vh; 
   overflow: hidden;
 }
-.video-containerd.video video {
+.video-container video {
   /* Make video to at least 100% wide and tall */
   min-width: 99vw; 
   min-height: 99vh; 
@@ -72,12 +68,6 @@
  window.addEventListener("load", function () {
     const loader = document.querySelector(".loader");
     loader.className += " hidden"; // class "loader hidden"
-  
-    const video = document.querySelector(".video-container");
-    video.className += "show";
-  
-    const videocss = document.querySelector(".video-containerd");
-    videocss.className += "video";
 });
     function myFunction() {
       location.href = 'https://revu.geoloup.com/app/soon';
