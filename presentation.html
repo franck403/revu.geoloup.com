@@ -31,12 +31,11 @@
     }
 }
 
-.thumb {
-    height: 100px;
-    border: 1px solid black;
-    margin: 10px;
-}
 .video-container {
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+.video-container.show {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -44,7 +43,7 @@
   height: 100vh; 
   overflow: hidden;
 }
-.video-container video {
+.video-containerd.video video {
   /* Make video to at least 100% wide and tall */
   min-width: 100vw; 
   min-height: 100vh; 
@@ -65,7 +64,7 @@
   <div class="loader">
     <img src="https://cdn1.francoischouin1.repl.co/gif/loding.gif" alt="Loading..." />
   </div>
-  <video class="video-container thumb" id="video" onclick="play()" onended="myFunction()">
+  <video class="video-container video-containerd" id="video" onclick="play()" onended="myFunction()">
     <source src="https://cdn1.francoischouin1.repl.co/video/presantation.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
@@ -73,6 +72,12 @@
  window.addEventListener("load", function () {
     const loader = document.querySelector(".loader");
     loader.className += " hidden"; // class "loader hidden"
+  
+    const video = document.querySelector(".video-container");
+    loader.className += "show";
+  
+    const video = document.querySelector(".video-containerd");
+    loader.className += "video";
 });
     function myFunction() {
       location.href = 'https://revu.geoloup.com/app/soon';
