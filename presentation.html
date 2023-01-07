@@ -39,6 +39,27 @@
       document.getElementById('video').play();
    } 
 </script>
+<script type='text/javascript'>
+ window.onload = () => {
+  const audio = document.getElementById('video');
+
+  audio.addEventListener('progress', () => {
+    const duration = audio.duration;
+    if (duration > 0) {
+      for (let i = 0; i < audio.buffered.length; i++) {
+        if (
+          audio.buffered.start(audio.buffered.length - 1 - i) <
+          audio.currentTime
+        ) {break;}
+      }
+    }
+  });
+
+    }
+  });
+};
+
+</script>
 
 </body>
 </html>
