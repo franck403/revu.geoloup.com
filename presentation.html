@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style>.video-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh; 
+  overflow: hidden;
+}
+.video-container video {
+  /* Make video to at least 100% wide and tall */
+  min-width: 100vw; 
+  min-height: 100vh; 
+
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: auto;
+  height: auto;
+
+  /* Center the video */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+</style>
+</head>
+ <body>
+  <video class="video-container" id="video" onclick="play()" onended="myFunction()">
+    <source src="/video/presantation.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+<script type='text/javascript'>
+    function myFunction() {
+      location.href = 'https://revu.geoloup.com/app/soon';
+    }
+    function play() { 
+      document.getElementById('video').play();
+   } 
+</script>
+
+</body>
+</html>
