@@ -6,7 +6,8 @@
     font-weight: 600;
 }
 body{
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/image/background.jpg);
+    
+    background: url(/image/background.jpg);
     height: 90vh;
     background-repeat: no-repeat;
     background-size: cover;
