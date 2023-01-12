@@ -1,1 +1,1 @@
-<iframe url="index.html">
+<img url="image/maison.png"/>
