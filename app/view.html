@@ -165,22 +165,21 @@
     iframe.setAttribute("frameborder", "0")
     iframe.setAttribute("allowfullscreen", "True")
   }
-  function title() {
-    var msg = window.top.document.title;
-    var speed = 150;
-    var endChar = "";
-    var pos = 0;
-    function moveTitle() {
-      var ml = msg.length;
+  var msg = window.top.document.title;
+  var speed = 150;
+  var endChar = "";
+  var pos = 0;
+  function moveTitle() {
+    var ml = msg.length;
 
-      title = msg.substr(pos, ml) + endChar + msg.substr(0, pos);
-      window.top.document.title = title;
+    title = msg.substr(pos, ml) + endChar + msg.substr(0, pos);
+    window.top.document.title = title;
 
-      pos++;
-      if (pos > ml) pos = 0;
-      window.setTimeout("moveTitle()", speed);
-    }
-    moveTitle()
+    pos++;
+    if (pos > ml) pos = 0;
+    window.setTimeout("moveTitle()", speed);
+
+
   }
   function reader(load) {
     var audio = new Audio('https://revu.geoloup.com/loading.mp3');
@@ -215,7 +214,7 @@
     document.getElementById("revue").src = revulink;
     document.getElementById("body").style.height = "90vh";
     $('#revue').show()
-    title()
+    moveTitle()()
   }
 
   function unsplash() {
