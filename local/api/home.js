@@ -28,7 +28,7 @@ function login() {
           confirmButtonText: 'OK'
         }).then((result) => {
           if (result.isConfirmed) {
-            window.location.href = 'https://revu.geoloup.com/list.html';
+            window.location.href = 'https://revu.geoloup.com//app/view.html';
           }
         });
       } else {
