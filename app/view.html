@@ -115,6 +115,8 @@
                 class="animals item-link tlist">GeoRenarde - Les pandas roux</a>
               <a onclick='read("i5oion8mmoinjk")' style="color:white;text-align:left;"
                 class="animals item-link tlist">GeoRenarde - Les loups</a>
+              <a onclick='read("r9494jf40jferngjfnirjf")' style="color:white;text-align:left;"
+                class="animals item-link tlist">Autre - animaux</a>
             </element>
           </ol>
         </div>
@@ -169,8 +171,8 @@
   function reader(load) {
     var audio = new Audio('https://revu.geoloup.com/loading.mp3');
     audio.play();
-    var db = { "b4t58tb9854tb89": "/local/page/georenard/2022/noel2022.html","oi5hhfsatb9p5rfi":"/local/page/georenard/2023/nouvelans.html", "789iongt66re": "/local/page/georenard/2022/humain.html", "r89n5bt895t98y5": "/local/page/georenard/2022/olympique.html", "jufehi554ufleisn8l49": "/local/page/georenard/dieu/egypte/seth.html", "49jj3mp489ypm389": "/local/page/georenard/2022/halloween2022.html","i5oion8mmoinjk":"/local/page/georenarde/2023/loups.html","4bo34fkrjoijjio4hla":"/local/page/georenarde/2023/pandasroux.html"}
-    var textdb = { "b4t58tb9854tb89": "Noël","oi5hhfsatb9p5rfi":"Nouvel Ans", "789iongt66re": "Les humains", "r89n5bt895t98y5": "L'histoire des jeux olympique", "jufehi554ufleisn8l49": "le dieu d'égypte seth", "49jj3mp489ypm389": "Halloween","i5oion8mmoinjk":"Les loups","4bo34fkrjoijjio4hla":"Les pandas roux"}
+    var db = { "r9494jf40jferngjfnirjf":"/local/page/georenard/2023/defense_animaux.html","b4t58tb9854tb89": "/local/page/georenard/2022/noel2022.html","oi5hhfsatb9p5rfi":"/local/page/georenard/2023/nouvelans.html", "789iongt66re": "/local/page/georenard/2022/humain.html", "r89n5bt895t98y5": "/local/page/georenard/2022/olympique.html", "jufehi554ufleisn8l49": "/local/page/georenard/dieu/egypte/seth.html", "49jj3mp489ypm389": "/local/page/georenard/2022/halloween2022.html","i5oion8mmoinjk":"/local/page/georenarde/2023/loups.html","4bo34fkrjoijjio4hla":"/local/page/georenarde/2023/pandasroux.html"}
+    var textdb = { "r9494jf40jferngjfnirjf":"Défence animaux","b4t58tb9854tb89": "Noël","oi5hhfsatb9p5rfi":"Nouvel Ans", "789iongt66re": "Les humains", "r89n5bt895t98y5": "L'histoire des jeux olympique", "jufehi554ufleisn8l49": "le dieu d'égypte seth", "49jj3mp489ypm389": "Halloween","i5oion8mmoinjk":"Les loups","4bo34fkrjoijjio4hla":"Les pandas roux"}
     if (load == "last") {
       if (typeof (Storage) !== "undefined") {
         revudb = localStorage.getItem("lastrevu");
