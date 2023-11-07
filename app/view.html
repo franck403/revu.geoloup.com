@@ -101,6 +101,8 @@
               <a onclick='read("last")' style="color:white;text-align:left;" class="animals item-link tlist">La dernière revue que tu as lue</a>
               <a onclick='read("jufehi554ufleisn8l49")' style="color:white;text-align:left;"
                 class="animals item-link tlist">Bibliographie - Seth dieu</a>
+                <a onclick='read("v55t4uo34vnvinntinho")' style="color:white;text-align:left;"
+                  class="animals item-link tlist">Livre - Roman aventure sur l'égypte</a>
               <a onclick='read("r89n5bt895t98y5")' style="color:white;text-align:left;"
                 class="animals item-link tlist">GeoRenard - les jeux olympiques</a>
               <a onclick='read("789iongt66re")' style="color:white;text-align:left;"
@@ -171,8 +173,8 @@
   function reader(load) {
     var audio = new Audio('https://revu.geoloup.com/loading.mp3');
     audio.play();
-    var db = { "r9494jf40jferngjfnirjf":"/local/page/georenard/2023/defense_animaux.html","b4t58tb9854tb89": "/local/page/georenard/2022/noel2022.html","oi5hhfsatb9p5rfi":"/local/page/georenard/2023/nouvelans.html", "789iongt66re": "/local/page/georenard/2022/humain.html", "r89n5bt895t98y5": "/local/page/georenard/2022/olympique.html", "jufehi554ufleisn8l49": "/local/page/georenard/dieu/egypte/seth.html", "49jj3mp489ypm389": "/local/page/georenard/2022/halloween2022.html","i5oion8mmoinjk":"/local/page/georenarde/2023/loups.html","4bo34fkrjoijjio4hla":"/local/page/georenarde/2023/pandasroux.html"}
-    var textdb = { "r9494jf40jferngjfnirjf":"Défence animaux","b4t58tb9854tb89": "Noël","oi5hhfsatb9p5rfi":"Nouvel Ans", "789iongt66re": "Les humains", "r89n5bt895t98y5": "L'histoire des jeux olympique", "jufehi554ufleisn8l49": "le dieu d'égypte seth", "49jj3mp489ypm389": "Halloween","i5oion8mmoinjk":"Les loups","4bo34fkrjoijjio4hla":"Les pandas roux"}
+    var db = { "r9494jf40jferngjfnirjf":"/local/page/georenard/2023/defense_animaux.html","b4t58tb9854tb89": "/local/page/georenard/2022/noel2022.html","oi5hhfsatb9p5rfi":"/local/page/georenard/2023/nouvelans.html", "789iongt66re": "/local/page/georenard/2022/humain.html", "r89n5bt895t98y5": "/local/page/georenard/2022/olympique.html", "jufehi554ufleisn8l49": "/local/page/georenard/dieu/egypte/seth.html", "49jj3mp489ypm389": "/local/page/georenard/2022/halloween2022.html","i5oion8mmoinjk":"/local/page/georenarde/2023/loups.html","4bo34fkrjoijjio4hla":"/local/page/georenarde/2023/pandasroux.html","v55t4uo34vnvinntinho":"/local/page/livre/momies.html"}
+    var textdb = { "r9494jf40jferngjfnirjf":"Défence animaux","b4t58tb9854tb89": "Noël","oi5hhfsatb9p5rfi":"Nouvel Ans", "789iongt66re": "Les humains", "r89n5bt895t98y5": "L'histoire des jeux olympique", "jufehi554ufleisn8l49": "le dieu d'égypte seth", "49jj3mp489ypm389": "Halloween","i5oion8mmoinjk":"Les loups","4bo34fkrjoijjio4hla":"Les pandas roux","v55t4uo34vnvinntinho":"Roman d'aventure les momies"}
     if (load == "last") {
       if (typeof (Storage) !== "undefined") {
         revudb = localStorage.getItem("lastrevu");
