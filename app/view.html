@@ -209,6 +209,9 @@
     document.getElementById("body").style.height = "90vh";
     $('#loader').show()
     $('#splash').hide()
+    if (new URLSearchParams(window.location.search).has("id")) {
+      reader(new URLSearchParams(window.location.search).get("id"))
+    }
   }
   setTimeout(unsplash, 2300)
   function read(load) {
