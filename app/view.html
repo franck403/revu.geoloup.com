@@ -210,7 +210,7 @@
     $('#loader').show()
     $('#splash').hide()
     if (new URLSearchParams(window.location.search).has("id")) {
-      reader(new URLSearchParams(window.location.search).get("id"))
+      read(new URLSearchParams(window.location.search).get("id"))
     }
   }
   setTimeout(unsplash, 2300)
